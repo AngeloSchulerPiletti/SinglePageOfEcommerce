@@ -1,29 +1,48 @@
 <template>
-  <nav>
-    <div><inertia-link><img src="" alt=""></inertia-link></div>
-    <div>
-      <ul>
-        <li><inertia-link>Menu1</inertia-link></li>
-        <li><inertia-link>Menu2</inertia-link></li>
-        <li><inertia-link>Menu3</inertia-link></li>
-        <li><inertia-link>Menu4</inertia-link></li>
-        <li><inertia-link>Menu5</inertia-link></li>
-      </ul>
-    </div>
-    <div>
-      <inertia-link><img src="" alt=""></inertia-link>  
-      <inertia-link><img src="" alt=""></inertia-link>  
-      <inertia-link><img src="" alt=""></inertia-link>  
-    </div>
-  </nav>
+    <nav>
+        <div>
+            <inertia-link><img src="" alt="" /></inertia-link>
+        </div>
+        <div>
+            <ul id="menu_links">
+                <li><inertia-link>ROUPAS</inertia-link></li>
+                <li><inertia-link>ACESSÓRIOS</inertia-link></li>
+                <li><inertia-link>JOIAS</inertia-link></li>
+                <li><inertia-link>CONTATO</inertia-link></li>
+                <li><inertia-link>SOBRE NÓS</inertia-link></li>
+            </ul>
+        </div>
+        <div>
+            <inertia-link><img src="" alt="" /></inertia-link>
+            <inertia-link><img src="" alt="" /></inertia-link>
+            <inertia-link><img src="" alt="" /></inertia-link>
+        </div>
+    </nav>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
+<style lang="scss">
+@import 'resources/css/sass/allImports';
 
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5vw;
+
+  background-color: $notblack;
+
+  #menu_links{
+    li{
+      display: inline-block;
+      margin: 0 0.2vw 0 0.2vw;
+      
+      a{
+        color: $white;
+      }
+    }
+  }
+}
 </style>

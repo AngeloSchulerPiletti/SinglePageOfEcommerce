@@ -1,53 +1,103 @@
 <template>
-  <footer>
-    <div>
-      <hr>
-      <img src="" alt="">
-      <hr>
-    </div>
-
-    <div>
-      <div>
-        <h6>MENU</h6>
-        <ul>
-          <li><inertia-link>Submenu</inertia-link></li>
-          <li><inertia-link>Submenu</inertia-link></li>
-          <li><inertia-link>Submenu</inertia-link></li>
-          <li><inertia-link>Submenu</inertia-link></li>
-          <li><inertia-link>Submenu</inertia-link></li>
-        </ul>
-      </div>
-
-      <div>
-        <h6>MENU</h6>
-        <div>
-          <form action="getEmail" method="POST">
-            <input type="email" name="" id="" placeholder="Email">
-            <button type="submit">ENVIAR </button>
-          </form>
-          <hr>
+    <footer>
+        <div id="footer_top">
+            <hr />
+            <img src="" alt="" />
+            <hr />
         </div>
-      </div>
 
-      <div>
-        <h6>MENU</h6>
-        <ul>
-          <li><inertia-link><img src="" alt="">Submenu</inertia-link></li>
-          <li><inertia-link><img src="" alt="">Submenu</inertia-link></li>
-        </ul>
-      </div>
-    </div>
+        <div id="footer_middle">
+            <div>
+                <h6>CONTATO</h6>
+                <ul>
+                    <li><inertia-link>Trabalhe Conosco</inertia-link></li>
+                    <li><inertia-link>Assessoria Privada</inertia-link></li>
+                    <li><inertia-link>Elogios</inertia-link></li>
+                    <li><inertia-link>Reclamações</inertia-link></li>
+                    <li><inertia-link>Imprensa</inertia-link></li>
+                </ul>
+            </div>
 
-    <div><span>@BeGI - Be GI to be Beautiful - CPF 051.057.840-30</span></div>
-  </footer>
+            <div>
+                <h6>NEWSLETTER</h6>
+                <div>
+                    <form action="getEmail" method="POST">
+                        <input type="email" name="" id="" placeholder="Email" />
+                        <button type="submit">ENVIAR</button>
+                    </form>
+                    <hr />
+                </div>
+            </div>
+
+            <div>
+                <h6>SOBRE NÓS</h6>
+                <ul>
+                    <li>
+                        <inertia-link
+                            ><img src="" alt="" />História</inertia-link
+                        >
+                    </li>
+                    <li>
+                        <inertia-link
+                            ><img src="" alt="" />BeGI Green</inertia-link
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="footer_bottom">
+            <span>@BeGI - Be GI to be Beautiful - CPF 051.057.840-30</span>
+        </div>
+    </footer>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
+<style lang="scss">
+@import "resources/css/sass/allImports";
 
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: linear-gradient(0deg, $notwhite, transparent, transparent);
+
+    #footer_top {
+        display: flex;
+        width: 100%;
+
+        hr {
+            border: none;
+            outline: none;
+
+            height: 1px;
+            width: 100%;
+            background-color: $black;
+        }
+    }
+    #footer_middle {
+        display: flex;
+        justify-content: space-around;
+        margin: 1vw 0 1vw 0;
+
+        width: 100%;
+
+        h6 {
+            color: $black;
+        }
+        a {
+            color: $black;
+        }
+    }
+    #footer_bottom {
+        padding-bottom: 2vw;
+        span {
+            color: $black;
+        }
+    }
+}
 </style>
