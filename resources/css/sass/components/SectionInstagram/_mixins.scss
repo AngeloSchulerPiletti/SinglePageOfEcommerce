@@ -1,0 +1,9 @@
+@mixin horizontalDivs {
+    width: 24vw;
+    height: 24vw;
+    overflow: hidden;
+
+    img {
+        height: 100%;
+    }
+}

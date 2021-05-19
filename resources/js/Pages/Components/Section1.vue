@@ -54,7 +54,7 @@ export default {};
 #sec1_container{
     display: flex;
     background-color: $notblack;
-    margin: 0 2vw 34vw 0;
+    margin: 0 0vw 34vw 0;
     
 
     // position: relative;
@@ -67,8 +67,8 @@ export default {};
     align-items: flex-start;
     
     #sec1_left{
-        width: 35vw;
-        margin-right: 4vw;
+        width: 38vw;
+        margin-right: 5vw;
         margin-top: 6vw;
 
         div{
@@ -123,7 +123,7 @@ export default {};
         .div_right{
             position: absolute;
 
-            right: 2vw;
+            right: 0vw;
 
             width: 28vw;
             img{
