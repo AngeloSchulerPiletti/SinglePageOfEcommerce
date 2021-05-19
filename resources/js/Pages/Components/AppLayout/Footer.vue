@@ -2,7 +2,7 @@
     <footer>
         <div id="footer_top">
             <hr />
-            <img src="" alt="" />
+            <LogoPreto id="logopreto"/>
             <hr />
         </div>
 
@@ -53,7 +53,12 @@
 </template>
 
 <script>
-export default {};
+import LogoPreto from "../SVGs/LogoPreto";
+export default {
+    components: {
+        LogoPreto,
+    },
+};
 </script>
 
 <style lang="scss">
@@ -66,11 +71,18 @@ footer {
 
     background-image: linear-gradient(0deg, $notwhite, $redwhite, $redwhite);
 
-
     #footer_top {
         display: flex;
         width: 100%;
 
+        align-items: center;
+
+        margin-bottom: 8vw;
+
+        #logopreto{
+          width: 30vw;
+          margin: 0 2vw 0 2vw;
+        }
         hr {
             border: none;
             outline: none;

@@ -44,7 +44,7 @@ export default {};
 
     position: relative;
 
-    margin-bottom: 14vw;
+    margin-bottom: 20vw;
 
     h4 {
         @include Font2_S();
