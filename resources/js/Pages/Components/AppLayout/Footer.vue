@@ -64,7 +64,8 @@ footer {
     flex-direction: column;
     align-items: center;
 
-    background-image: linear-gradient(0deg, $notwhite, transparent, transparent);
+    background-image: linear-gradient(0deg, $notwhite, $redwhite, $redwhite);
+
 
     #footer_top {
         display: flex;

@@ -34,13 +34,29 @@ nav{
 
   background-color: $black;
 
+  transition-property: padding;
+  transition-duration: 200ms;
+
+  &:hover{
+    padding: 1vw;
+  }
+
   #menu_links{
     li{
       display: inline-block;
-      margin: 0 0.2vw 0 0.2vw;
+      margin: 0 1.2vw 0 1.2vw;
       
       a{
+        @include Font2_SS();
         color: $white;
+        font-size: 1.2vw;
+
+        transition-property: color;
+        transition-duration: 300ms;
+
+        &:hover{
+          color: $redwhite;
+        }
       }
     }
   }

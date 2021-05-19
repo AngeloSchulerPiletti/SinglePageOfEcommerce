@@ -28,7 +28,10 @@ export default {
 </script>
 
 <style lang="scss">
-h1{
-    color: red;
+@import 'resources/css/sass/allImports';
+
+main{
+    background-color: $redwhite;
 }
+
 </style>

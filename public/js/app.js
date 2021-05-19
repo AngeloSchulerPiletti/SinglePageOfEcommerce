@@ -17257,7 +17257,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div><div><div><span></span><h3></h3><p></p></div><img src=\"\" alt=\"\"></div><div><div><img src=\"\" alt=\"\"><div><h6></h6><p></p></div></div><div><div><img src=\"\" alt=\"\"><div><h6></h6><p></p></div></div><div><img src=\"\" alt=\"\"><div><h6></h6><p></p></div></div></div></div></div>", 1);
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div id=\"sec1_container\"><div id=\"sec1_left\"><div><span>BeGI é ser você</span><h3>Ser linda nunca foi tão fácil</h3><p>Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Casamentiss faiz malandris se pirulitá. Per aumento de cachacis, eu reclamis. A ordem dos tratores não altera o pão duris.</p></div><img src=\"\" alt=\"\"></div><div id=\"sec1_right\"><div class=\"div_left card_container\"><img src=\"images/pictures/image1.jpg\" alt=\"\"><div><h6>Linha Dark Girls</h6><p>A renovada linha gótica que perpassa a história da humanidade. BeGI, BeGothic</p></div></div><div class=\"div_right\"><div class=\"card_container\"><img src=\"images/pictures/image4.jpg\" alt=\"\"><div><h6>Linha Sad Girls:BeSad</h6><p>BeGI, BeSad... A beleza é conveniente até mesmo na tristeza</p></div></div><div class=\"card_container\"><img src=\"images/pictures/image2.jpg\" alt=\"\"><div><h6>Linha Make:BePowder</h6><p>Porque maquiagem nunca é demais para você</p></div></div></div></div></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("section", null, [_hoisted_1]);
@@ -17441,10 +17441,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=template&id=06d9b79c":
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=template&id=06d9b79c ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=template&id=06d9b79c&scoped=true":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=template&id=06d9b79c&scoped=true ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -17454,10 +17454,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+
+var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("data-v-06d9b79c");
+
+(0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-06d9b79c");
+
 var _hoisted_1 = {
   id: "carousel_selector"
 };
-function render(_ctx, _cache, $props, $setup, $data, $options) {
+
+(0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
+
+var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
   var _component_swiper_slide = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("swiper-slide");
 
   var _component_swiper = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("swiper");
@@ -17473,13 +17481,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     },
     id: "swiper_carousel"
   }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+    "default": _withId(function () {
       return [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.images, function (image, index) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_swiper_slide, {
           "class": "slides",
           key: index
         }, {
-          "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+          "default": _withId(function () {
             return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
               "class": "carousel_imgs",
               src: image,
@@ -17513,7 +17521,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }), 128
   /* KEYED_FRAGMENT */
   ))])]);
-}
+});
 
 /***/ }),
 
@@ -17744,7 +17752,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "footer {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-image: linear-gradient(0deg, #f6f6f6ff, transparent, transparent);\n}\nfooter #footer_top {\n  display: flex;\n  width: 100%;\n}\nfooter #footer_top hr {\n  border: none;\n  outline: none;\n  height: 1px;\n  width: 100%;\n  background-color: #000000ff;\n}\nfooter #footer_middle {\n  display: flex;\n  justify-content: space-around;\n  margin: 1vw 0 1vw 0;\n  width: 100%;\n}\nfooter #footer_middle h6 {\n  color: #000000ff;\n}\nfooter #footer_middle a {\n  color: #000000ff;\n}\nfooter #footer_bottom {\n  padding-bottom: 2vw;\n}\nfooter #footer_bottom span {\n  color: #000000ff;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "footer {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  background-image: linear-gradient(0deg, #f6f6f6ff, #f5e5d9ff, #f5e5d9ff);\n}\nfooter #footer_top {\n  display: flex;\n  width: 100%;\n}\nfooter #footer_top hr {\n  border: none;\n  outline: none;\n  height: 1px;\n  width: 100%;\n  background-color: #000000ff;\n}\nfooter #footer_middle {\n  display: flex;\n  justify-content: space-around;\n  margin: 1vw 0 1vw 0;\n  width: 100%;\n}\nfooter #footer_middle h6 {\n  color: #000000ff;\n}\nfooter #footer_middle a {\n  color: #000000ff;\n}\nfooter #footer_bottom {\n  padding-bottom: 2vw;\n}\nfooter #footer_bottom span {\n  color: #000000ff;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17768,7 +17776,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "nav {\n  display: flex;\n  justify-content: space-between;\n  padding: 0.5vw;\n  background-color: #000000ff;\n}\nnav #menu_links li {\n  display: inline-block;\n  margin: 0 0.2vw 0 0.2vw;\n}\nnav #menu_links li a {\n  color: #ffffffff;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "nav {\n  display: flex;\n  justify-content: space-between;\n  padding: 0.5vw;\n  background-color: #000000ff;\n  transition-property: padding;\n  transition-duration: 200ms;\n}\nnav:hover {\n  padding: 1vw;\n}\nnav #menu_links li {\n  display: inline-block;\n  margin: 0 1.2vw 0 1.2vw;\n}\nnav #menu_links li a {\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  color: #ffffffff;\n  font-size: 1.2vw;\n  transition-property: color;\n  transition-duration: 300ms;\n}\nnav #menu_links li a:hover {\n  color: #f5e5d9ff;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17799,10 +17807,34 @@ ___CSS_LOADER_EXPORT___.push([module.id, "svg {\n  transition-property: transfor
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss":
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Section1.vue?vue&type=style&index=0&id=fee44f68&lang=scss":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Section1.vue?vue&type=style&index=0&id=fee44f68&lang=scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "#sec1_container {\n  display: flex;\n  background-color: #272727ff;\n  margin: 0 2vw 34vw 0;\n  padding: 2vw 2vw 20vw 2vw;\n  justify-content: space-between;\n  align-items: flex-start;\n}\n#sec1_container #sec1_left {\n  width: 35vw;\n  margin-right: 4vw;\n  margin-top: 6vw;\n}\n#sec1_container #sec1_left div span, #sec1_container #sec1_left div h3, #sec1_container #sec1_left div p {\n  color: #f6f6f6ff;\n}\n#sec1_container #sec1_left div span {\n  font-family: 'Playfair Display', serif;\n  font-weight: 400;\n  display: swap;\n  font-style: italic;\n  font-size: 1vw;\n}\n#sec1_container #sec1_left div h3 {\n  font-family: 'Playfair Display', serif;\n  font-weight: 700;\n  display: swap;\n  font-size: 3vw;\n}\n#sec1_container #sec1_left div p {\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  font-size: 1.4vw;\n  margin-top: 1vw;\n}\n#sec1_container #sec1_right {\n  width: 64vw;\n}\n#sec1_container #sec1_right h6, #sec1_container #sec1_right p {\n  color: #f6f6f6ff;\n  padding: 0 2vw 0 2vw;\n}\n#sec1_container #sec1_right h6 {\n  font-family: 'Playfair Display', serif;\n  font-weight: 500;\n  display: swap;\n  font-size: 1.5vw;\n  margin-top: 1vw;\n  margin-bottom: 0.4vw;\n}\n#sec1_container #sec1_right p {\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  font-style: italic;\n  font-size: 1vw;\n}\n#sec1_container #sec1_right .div_left {\n  position: absolute;\n  transform: translateY(10%);\n  width: 28vw;\n}\n#sec1_container #sec1_right .div_left img {\n  width: 100%;\n}\n#sec1_container #sec1_right .div_right {\n  position: absolute;\n  right: 2vw;\n  width: 28vw;\n}\n#sec1_container #sec1_right .div_right img {\n  width: 100%;\n}\n#sec1_container #sec1_right .card_container {\n  margin: 0vw 2vw 2.5vw 0;\n  padding: 0 0 1.6vw 0;\n  text-align: center;\n  background-color: #000000ff;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss&scoped=true":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss&scoped=true ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -17816,7 +17848,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#swiper_carousel .slides {\n  max-height: 70vh;\n  height: 50vw;\n}\n#swiper_carousel .slides .carousel_imgs {\n  width: 100%;\n  transform: translateY(-6%);\n}\n#carousel_selector {\n  display: flex;\n  justify-content: space-between;\n  margin: 1.5vw 0 5vw 0;\n  padding: 0 35vw 0 35vw;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n#carousel_selector .selector_container {\n  border-radius: 100%;\n  width: 2vw;\n  height: 2vw;\n  overflow: hidden;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n}\n#carousel_selector .selector_container .selector_img {\n  border-radius: 100%;\n  width: 1.1vw;\n  height: 1.1vw;\n  border: 0.15vw solid #ffffffff;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#swiper_carousel .slides[data-v-06d9b79c] {\n  max-height: 70vh;\n  height: 50vw;\n}\n#swiper_carousel .slides .carousel_imgs[data-v-06d9b79c] {\n  width: 100%;\n  transform: translateY(-6%);\n}\n#carousel_selector[data-v-06d9b79c] {\n  display: flex;\n  justify-content: space-between;\n  margin: 3vw 0 5vw 0;\n  padding: 0 35vw 0 35vw;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n#carousel_selector .selector_container[data-v-06d9b79c] {\n  border-radius: 100%;\n  width: 2vw;\n  height: 2vw;\n  overflow: hidden;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n}\n#carousel_selector .selector_container .selector_img[data-v-06d9b79c] {\n  border-radius: 100%;\n  width: 1.1vw;\n  height: 1.1vw;\n  border: 0.15vw solid #ffffffff;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -17840,7 +17872,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "h1 {\n  color: red;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "main {\n  background-color: #f5e5d9ff;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -32177,9 +32209,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Section1_vue_vue_type_template_id_fee44f68__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Section1.vue?vue&type=template&id=fee44f68 */ "./resources/js/Pages/Components/Section1.vue?vue&type=template&id=fee44f68");
 /* harmony import */ var _Section1_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Section1.vue?vue&type=script&lang=js */ "./resources/js/Pages/Components/Section1.vue?vue&type=script&lang=js");
+/* harmony import */ var _Section1_vue_vue_type_style_index_0_id_fee44f68_lang_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Section1.vue?vue&type=style&index=0&id=fee44f68&lang=scss */ "./resources/js/Pages/Components/Section1.vue?vue&type=style&index=0&id=fee44f68&lang=scss");
 
 
 
+
+;
 _Section1_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default.render = _Section1_vue_vue_type_template_id_fee44f68__WEBPACK_IMPORTED_MODULE_0__.render
 /* hot reload */
 if (false) {}
@@ -32279,15 +32314,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _SwipCarousel_vue_vue_type_template_id_06d9b79c__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SwipCarousel.vue?vue&type=template&id=06d9b79c */ "./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=template&id=06d9b79c");
+/* harmony import */ var _SwipCarousel_vue_vue_type_template_id_06d9b79c_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SwipCarousel.vue?vue&type=template&id=06d9b79c&scoped=true */ "./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=template&id=06d9b79c&scoped=true");
 /* harmony import */ var _SwipCarousel_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SwipCarousel.vue?vue&type=script&lang=js */ "./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=script&lang=js");
-/* harmony import */ var _SwipCarousel_vue_vue_type_style_index_0_id_06d9b79c_lang_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss */ "./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss");
+/* harmony import */ var _SwipCarousel_vue_vue_type_style_index_0_id_06d9b79c_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss&scoped=true */ "./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss&scoped=true");
 
 
 
 
 ;
-_SwipCarousel_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default.render = _SwipCarousel_vue_vue_type_template_id_06d9b79c__WEBPACK_IMPORTED_MODULE_0__.render
+_SwipCarousel_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default.render = _SwipCarousel_vue_vue_type_template_id_06d9b79c_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render
+_SwipCarousel_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default.__scopeId = "data-v-06d9b79c"
 /* hot reload */
 if (false) {}
 
@@ -32659,18 +32695,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=template&id=06d9b79c":
-/*!*********************************************************************************************!*\
-  !*** ./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=template&id=06d9b79c ***!
-  \*********************************************************************************************/
+/***/ "./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=template&id=06d9b79c&scoped=true":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=template&id=06d9b79c&scoped=true ***!
+  \*********************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipCarousel_vue_vue_type_template_id_06d9b79c__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipCarousel_vue_vue_type_template_id_06d9b79c_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipCarousel_vue_vue_type_template_id_06d9b79c__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./SwipCarousel.vue?vue&type=template&id=06d9b79c */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=template&id=06d9b79c");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipCarousel_vue_vue_type_template_id_06d9b79c_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./SwipCarousel.vue?vue&type=template&id=06d9b79c&scoped=true */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=template&id=06d9b79c&scoped=true");
 
 
 /***/ }),
@@ -32758,18 +32794,35 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss":
-/*!************************************************************************************************************!*\
-  !*** ./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss ***!
-  \************************************************************************************************************/
+/***/ "./resources/js/Pages/Components/Section1.vue?vue&type=style&index=0&id=fee44f68&lang=scss":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/Pages/Components/Section1.vue?vue&type=style&index=0&id=fee44f68&lang=scss ***!
+  \*************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipCarousel_vue_vue_type_style_index_0_id_06d9b79c_lang_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-style-loader/index.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!../../../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss");
-/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipCarousel_vue_vue_type_style_index_0_id_06d9b79c_lang_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipCarousel_vue_vue_type_style_index_0_id_06d9b79c_lang_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Section1_vue_vue_type_style_index_0_id_fee44f68_lang_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-style-loader/index.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!../../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Section1.vue?vue&type=style&index=0&id=fee44f68&lang=scss */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Section1.vue?vue&type=style&index=0&id=fee44f68&lang=scss");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Section1_vue_vue_type_style_index_0_id_fee44f68_lang_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Section1_vue_vue_type_style_index_0_id_fee44f68_lang_scss__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
-/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipCarousel_vue_vue_type_style_index_0_id_06d9b79c_lang_scss__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipCarousel_vue_vue_type_style_index_0_id_06d9b79c_lang_scss__WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
+/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Section1_vue_vue_type_style_index_0_id_fee44f68_lang_scss__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Section1_vue_vue_type_style_index_0_id_fee44f68_lang_scss__WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
+/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
+
+
+/***/ }),
+
+/***/ "./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss&scoped=true":
+/*!************************************************************************************************************************!*\
+  !*** ./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss&scoped=true ***!
+  \************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipCarousel_vue_vue_type_style_index_0_id_06d9b79c_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-style-loader/index.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!../../../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss&scoped=true */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss&scoped=true");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipCarousel_vue_vue_type_style_index_0_id_06d9b79c_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipCarousel_vue_vue_type_style_index_0_id_06d9b79c_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
+/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipCarousel_vue_vue_type_style_index_0_id_06d9b79c_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipCarousel_vue_vue_type_style_index_0_id_06d9b79c_lang_scss_scoped_true__WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
 /* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
 
 
@@ -32893,22 +32946,43 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss":
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Section1.vue?vue&type=style&index=0&id=fee44f68&lang=scss":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Section1.vue?vue&type=style&index=0&id=fee44f68&lang=scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!../../../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss");
+var content = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!../../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Section1.vue?vue&type=style&index=0&id=fee44f68&lang=scss */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Section1.vue?vue&type=style&index=0&id=fee44f68&lang=scss");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.id, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! !../../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("cfe8aa84", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss&scoped=true":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss&scoped=true ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!../../../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss&scoped=true */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss&scoped=true");
 if(content.__esModule) content = content.default;
 if(typeof content === 'string') content = [[module.id, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = __webpack_require__(/*! !../../../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
-var update = add("72b90164", content, false, {});
+var update = add("4298d6a3", content, false, {});
 // Hot Module Replacement
 if(false) {}
 

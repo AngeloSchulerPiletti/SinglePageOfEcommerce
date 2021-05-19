@@ -63,7 +63,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import 'resources/css/sass/allImports';
 
 #swiper_carousel {
@@ -83,7 +83,7 @@ export default {
   display: flex;
   justify-content: space-between;
 
-  margin: 1.5vw 0 5vw 0;
+  margin: 3vw 0 5vw 0;
   padding: 0 35vw 0 35vw;
   
   height: fit-content;

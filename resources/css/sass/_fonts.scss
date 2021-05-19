@@ -36,6 +36,6 @@
     display: swap;
 }
 @mixin Font2_SSI {
-    @include Font1_SS();
+    @include Font2_SS();
     font-style: italic;
 }
