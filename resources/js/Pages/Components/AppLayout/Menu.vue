@@ -32,7 +32,7 @@ nav{
   justify-content: space-between;
   padding: 0.5vw;
 
-  background-color: $notblack;
+  background-color: $black;
 
   #menu_links{
     li{
