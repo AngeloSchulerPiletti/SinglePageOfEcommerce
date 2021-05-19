@@ -40,16 +40,13 @@ export default {
 @import "resources/css/sass/allImports";
 
 nav {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 4fr 9fr 4fr;
+    justify-items: center;
     align-items: center;
+    
     padding: 0 1vw 0 1vw;
-
     background-color: $black;
-
-    transition-property: padding;
-    transition-duration: 200ms;
-
 
     .left {
         width: 12vw;
@@ -63,7 +60,7 @@ nav {
                 a {
                     @include Font2_SS();
                     color: $white;
-                    font-size: 1.2vw;
+                    font-size: 1.4vw;
 
                     transition-property: color;
                     transition-duration: 300ms;
