@@ -59,8 +59,6 @@ export default {};
 
         width: 100%;
 
-        padding: 0 10vw 0 10vw;
-
         .left {
             @include horizontalDivs();
         }
