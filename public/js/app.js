@@ -16815,7 +16815,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {
+    showP: function showP(el) {
+      var elementP = document.querySelector('#show_p' + el),
+          elementDiv = document.querySelector('#toAbove' + el);
+      elementP.style.display = 'block';
+      elementDiv.dataset.state = 'show';
+      console.log(elementP);
+      console.log(elementDiv);
+    },
+    hideP: function hideP(el) {
+      var elementP = document.querySelector('#show_p' + el),
+          elementDiv = document.querySelector('#toAbove' + el);
+      elementP.style.display = 'none';
+      elementDiv.dataset.state = 'hide';
+      console.log(elementP);
+      console.log(elementDiv);
+    }
+  }
+});
 
 /***/ }),
 
@@ -16866,27 +16885,41 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var swiper_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/vue */ "./node_modules/swiper/esm/vue/swiper.js");
-/* harmony import */ var swiper_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/vue */ "./node_modules/swiper/esm/vue/swiper-slide.js");
+/* harmony import */ var swiper_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! swiper/vue */ "./node_modules/swiper/esm/vue/swiper.js");
+/* harmony import */ var swiper_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! swiper/vue */ "./node_modules/swiper/esm/vue/swiper-slide.js");
 /* harmony import */ var swiper_swiper_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/swiper.scss */ "./node_modules/swiper/swiper.scss");
 /* harmony import */ var swiper_swiper_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(swiper_swiper_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var swiper_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/core */ "./node_modules/swiper/esm/components/core/core-class.js");
+/* harmony import */ var swiper_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/core */ "./node_modules/swiper/esm/components/navigation/navigation.js");
+/* harmony import */ var _SVGs_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../SVGs/Button */ "./resources/js/Pages/Components/SVGs/Button.vue");
 // Import Swiper Vue.js components
  // Import Swiper styles
 
 
+ // import Swiper core and required modules
+
+ // install Swiper modules
+
+swiper_core__WEBPACK_IMPORTED_MODULE_1__.default.use([swiper_core__WEBPACK_IMPORTED_MODULE_2__.default]);
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    Swiper: swiper_vue__WEBPACK_IMPORTED_MODULE_1__.Swiper,
-    SwiperSlide: swiper_vue__WEBPACK_IMPORTED_MODULE_2__.SwiperSlide
+    Swiper: swiper_vue__WEBPACK_IMPORTED_MODULE_4__.Swiper,
+    SwiperSlide: swiper_vue__WEBPACK_IMPORTED_MODULE_5__.SwiperSlide,
+    carouselbutton: _SVGs_Button__WEBPACK_IMPORTED_MODULE_3__.default
   },
-  methods: {
-    onSwiper: function onSwiper(swiper) {
-      console.log(swiper);
-    },
-    onSlideChange: function onSlideChange() {
-      console.log('slide change');
-    }
-  }
+  data: function data() {
+    return {
+      images: {
+        id1: "./images/pictures/image3.jpg",
+        id2: "./images/pictures/image4.jpg",
+        id3: "./images/pictures/image5.jpg",
+        id4: "./images/pictures/image6.jpg",
+        id5: "./images/pictures/image7.jpg"
+      }
+    };
+  },
+  methods: {}
 });
 
 /***/ }),
@@ -16940,7 +16973,9 @@ swiper_core__WEBPACK_IMPORTED_MODULE_1__.default.use([swiper_core__WEBPACK_IMPOR
     };
   },
   methods: {
-    goToImg: function goToImg(wich) {}
+    goToImg: function goToImg(wich) {
+      console.log(swiper_vue__WEBPACK_IMPORTED_MODULE_6__.Swiper); // this.swiper.slideTo(i, 200); 
+    }
   }
 });
 
@@ -17863,11 +17898,110 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  id: "sec1_container"
+};
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div id=\"sec1_container\"><div id=\"sec1_left\"><div><span>BeGI é ser você</span><h3>Ser linda nunca foi tão fácil</h3><p>Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Casamentiss faiz malandris se pirulitá. Per aumento de cachacis, eu reclamis. A ordem dos tratores não altera o pão duris.</p></div><img src=\"\" alt=\"\"></div><div id=\"sec1_right\"><div class=\"div_left card_container\"><img src=\"images/pictures/image1.jpg\" alt=\"\"><div><h6>Linha Dark Girls</h6><p>A renovada linha gótica que perpassa a história da humanidade. BeGI, BeGothic</p></div></div><div class=\"div_right\"><div class=\"card_container\"><img src=\"images/pictures/image4.jpg\" alt=\"\"><div><h6>Linha Sad Girls:BeSad</h6><p>BeGI, BeSad... A beleza é conveniente até mesmo na tristeza</p></div></div><div class=\"card_container\"><img src=\"images/pictures/image2.jpg\" alt=\"\"><div><h6>Linha Make:BePowder</h6><p>Porque maquiagem nunca é demais para você</p></div></div></div></div></div>", 1);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  id: "sec1_left"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", null, "BeGI é ser você"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h3", null, "Ser linda nunca foi tão fácil"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Casamentiss faiz malandris se pirulitá. Per aumento de cachacis, eu reclamis. A ordem dos tratores não altera o pão duris. ")]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+  src: "",
+  alt: ""
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_3 = {
+  id: "sec1_right"
+};
+
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+  src: "images/pictures/image1.jpg",
+  alt: ""
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  id: "toAbove1",
+  "data-state": "none"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Linha Dark Girls"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " A renovada linha gótica que perpassa a história da humanidade. BeGI, BeGothic "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
+  "class": "hide_p",
+  id: "show_p1"
+}, " Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Diuretics paradis num copo é motivis de denguis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Quem manda na minha terra sou euzis! Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Per aumento de cachacis, eu reclamis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. ")], -1
+/* HOISTED */
+);
+
+var _hoisted_6 = {
+  "class": "div_right"
+};
+
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+  src: "images/pictures/image4.jpg",
+  alt: ""
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  id: "toAbove2",
+  "data-state": "none"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Linha Sad Girls:BeSad"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " BeGI, BeSad... A beleza é conveniente até mesmo na tristeza "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
+  "class": "hide_p",
+  id: "show_p2"
+}, " Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Diuretics paradis num copo é motivis de denguis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Quem manda na minha terra sou euzis! Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Per aumento de cachacis, eu reclamis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. ")], -1
+/* HOISTED */
+);
+
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+  src: "images/pictures/image2.jpg",
+  alt: ""
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  id: "toAbove3",
+  "data-state": "none"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Linha Make:BePowder"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, "Porque maquiagem nunca é demais para você"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
+  "class": "hide_p",
+  id: "show_p3"
+}, " Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Diuretics paradis num copo é motivis de denguis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Quem manda na minha terra sou euzis! Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Per aumento de cachacis, eu reclamis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. ")], -1
+/* HOISTED */
+);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("section", null, [_hoisted_1]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("section", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+    "class": "div_left card_container",
+    onMouseover: _cache[1] || (_cache[1] = function ($event) {
+      return $options.showP(1);
+    }),
+    onMouseleave: _cache[2] || (_cache[2] = function ($event) {
+      return $options.hideP(1);
+    })
+  }, [_hoisted_4, _hoisted_5], 32
+  /* HYDRATE_EVENTS */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+    "class": "card_container",
+    onMouseover: _cache[3] || (_cache[3] = function ($event) {
+      return $options.showP(2);
+    }),
+    onMouseleave: _cache[4] || (_cache[4] = function ($event) {
+      return $options.hideP(2);
+    })
+  }, [_hoisted_7, _hoisted_8], 32
+  /* HYDRATE_EVENTS */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+    "class": "card_container",
+    onMouseover: _cache[5] || (_cache[5] = function ($event) {
+      return $options.showP(3);
+    }),
+    onMouseleave: _cache[6] || (_cache[6] = function ($event) {
+      return $options.hideP(3);
+    })
+  }, [_hoisted_9, _hoisted_10], 32
+  /* HYDRATE_EVENTS */
+  )])])])]);
 }
 
 /***/ }),
@@ -18069,54 +18203,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
-
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Slide 1");
-
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Slide 2");
-
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Slide 3");
-
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_swiper_slide = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("swiper-slide");
 
   var _component_swiper = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("swiper");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_swiper, {
-    "slides-per-view": 3,
-    "space-between": 50,
-    onSwiper: $options.onSwiper,
-    onSlideChange: $options.onSlideChange
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_swiper, {
+    spaceBetween: 0,
+    centeredSlides: true,
+    "class": "parallax-slider",
+    id: "swiper_banner"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_swiper_slide, null, {
-        "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-          return [_hoisted_1];
-        }),
-        _: 1
-        /* STABLE */
+      return [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.images, function (image, index) {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_swiper_slide, {
+          "class": "slides",
+          key: index
+        }, {
+          "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+            return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+              "class": "banner_imgs",
+              src: image,
+              alt: ""
+            }, null, 8
+            /* PROPS */
+            , ["src"])];
+          }),
+          _: 2
+          /* DYNAMIC */
 
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_swiper_slide, null, {
-        "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-          return [_hoisted_2];
-        }),
-        _: 1
-        /* STABLE */
-
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_swiper_slide, null, {
-        "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-          return [_hoisted_3];
-        }),
-        _: 1
-        /* STABLE */
-
-      })];
+        }, 1024
+        /* DYNAMIC_SLOTS */
+        );
+      }), 128
+      /* KEYED_FRAGMENT */
+      ))];
     }),
     _: 1
     /* STABLE */
 
-  }, 8
-  /* PROPS */
-  , ["onSwiper", "onSlideChange"]);
+  })]);
 }
 
 /***/ }),
@@ -18624,7 +18750,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#sec1_container {\n  display: flex;\n  background-color: #272727ff;\n  margin: 0 0vw 34vw 0;\n  padding: 2vw 2vw 20vw 2vw;\n  justify-content: space-between;\n  align-items: flex-start;\n}\n#sec1_container #sec1_left {\n  width: 38vw;\n  margin-right: 5vw;\n  margin-top: 6vw;\n}\n#sec1_container #sec1_left div span, #sec1_container #sec1_left div h3, #sec1_container #sec1_left div p {\n  color: #f6f6f6ff;\n}\n#sec1_container #sec1_left div span {\n  font-family: 'Playfair Display', serif;\n  font-weight: 400;\n  display: swap;\n  font-style: italic;\n  font-size: 1vw;\n}\n#sec1_container #sec1_left div h3 {\n  font-family: 'Playfair Display', serif;\n  font-weight: 700;\n  display: swap;\n  font-size: 3vw;\n}\n#sec1_container #sec1_left div p {\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  font-size: 1.4vw;\n  margin-top: 1vw;\n}\n#sec1_container #sec1_right {\n  width: 64vw;\n}\n#sec1_container #sec1_right h6, #sec1_container #sec1_right p {\n  color: #f6f6f6ff;\n  padding: 0 2vw 0 2vw;\n}\n#sec1_container #sec1_right h6 {\n  font-family: 'Playfair Display', serif;\n  font-weight: 500;\n  display: swap;\n  font-size: 1.5vw;\n  margin-top: 1vw;\n  margin-bottom: 0.4vw;\n}\n#sec1_container #sec1_right p {\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  font-style: italic;\n  font-size: 1vw;\n}\n#sec1_container #sec1_right .div_left {\n  position: absolute;\n  transform: translateY(10%);\n  width: 28vw;\n}\n#sec1_container #sec1_right .div_left img {\n  width: 100%;\n}\n#sec1_container #sec1_right .div_right {\n  position: absolute;\n  right: 0vw;\n  width: 28vw;\n}\n#sec1_container #sec1_right .div_right img {\n  width: 100%;\n}\n#sec1_container #sec1_right .card_container {\n  margin: 0vw 2vw 2.5vw 0;\n  padding: 0 0 1.6vw 0;\n  text-align: center;\n  background-color: #000000ff;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#sec1_container {\n  display: flex;\n  background-color: #272727ff;\n  margin: 0 0vw 34vw 0;\n  padding: 2vw 2vw 20vw 2vw;\n  justify-content: space-between;\n  align-items: flex-start;\n}\n#sec1_container #sec1_left {\n  width: 38vw;\n  margin-right: 5vw;\n  margin-top: 6vw;\n}\n#sec1_container #sec1_left div span,\n#sec1_container #sec1_left div h3,\n#sec1_container #sec1_left div p {\n  color: #f6f6f6ff;\n}\n#sec1_container #sec1_left div span {\n  font-family: 'Playfair Display', serif;\n  font-weight: 400;\n  display: swap;\n  font-style: italic;\n  font-size: 1vw;\n}\n#sec1_container #sec1_left div h3 {\n  font-family: 'Playfair Display', serif;\n  font-weight: 700;\n  display: swap;\n  font-size: 3vw;\n}\n#sec1_container #sec1_left div p {\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  font-size: 1.4vw;\n  margin-top: 1vw;\n}\n#sec1_container #sec1_right {\n  width: 64vw;\n}\n#sec1_container #sec1_right h6,\n#sec1_container #sec1_right p {\n  color: #f6f6f6ff;\n  padding: 0 2vw 0 2vw;\n}\n#sec1_container #sec1_right h6 {\n  font-family: 'Playfair Display', serif;\n  font-weight: 500;\n  display: swap;\n  font-size: 1.5vw;\n  margin-top: 1vw;\n  margin-bottom: 0.4vw;\n}\n#sec1_container #sec1_right p {\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  font-style: italic;\n  font-size: 1vw;\n}\n#sec1_container #sec1_right .hide_p {\n  display: none;\n}\n#sec1_container #sec1_right .div_left {\n  position: absolute;\n  transform: translateY(10%);\n  width: 28vw;\n}\n#sec1_container #sec1_right .div_left img {\n  width: 100%;\n}\n#sec1_container #sec1_right .div_right {\n  position: absolute;\n  right: 0vw;\n  width: 28vw;\n}\n#sec1_container #sec1_right .div_right img {\n  width: 100%;\n}\n#sec1_container #sec1_right .card_container {\n  margin: 0vw 2vw 2.5vw 0;\n  padding: 0 0 1.6vw 0;\n  text-align: center;\n  background-color: #000000ff;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -18648,7 +18774,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#sec2_container #sec2_div {\n  background-color: #272727ff;\n  padding: 2vw 2vw 2vw 4vw;\n  margin: 0 12vw 14vw 0;\n}\n#sec2_container #sec2_div .left {\n  display: flex;\n  width: 50vw;\n}\n#sec2_container #sec2_div .left img {\n  width: 20vw;\n}\n#sec2_container #sec2_div .left .topbottom_container {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  margin-left: 2vw;\n}\n#sec2_container #sec2_div .left .topbottom_container .top span,\n#sec2_container #sec2_div .left .topbottom_container .top h3,\n#sec2_container #sec2_div .left .topbottom_container .top p {\n  color: #ffffffff;\n}\n#sec2_container #sec2_div .left .topbottom_container .top span {\n  font-family: 'Playfair Display', serif;\n  font-weight: 400;\n  display: swap;\n  font-style: italic;\n  font-size: 1vw;\n}\n#sec2_container #sec2_div .left .topbottom_container .top h3 {\n  font-family: 'Playfair Display', serif;\n  font-weight: 700;\n  display: swap;\n  font-size: 3vw;\n}\n#sec2_container #sec2_div .left .topbottom_container .top p {\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  font-size: 1.4vw;\n  margin-top: 1vw;\n}\n#sec2_container #sec2_div .left .topbottom_container .bottom {\n  background-color: #000000ff;\n  border-radius: 0.4vw;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin: 0 0 1.5vw 1vw;\n  padding: 0.6vw 1.5vw 0.6vw 1.5vw;\n  transition-property: background-color;\n  transition-duration: 500ms;\n}\n#sec2_container #sec2_div .left .topbottom_container .bottom:hover {\n  background-color: #f5e5d9ff;\n}\n#sec2_container #sec2_div .left .topbottom_container .bottom:hover a {\n  color: #000000ff;\n}\n#sec2_container #sec2_div .left .topbottom_container .bottom a {\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  font-size: 1.4vw;\n  color: #ffffffff;\n  transition-property: color;\n  transition-duration: 300ms;\n}\n#sec2_container #sec2_div .right {\n  position: absolute;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#sec2_container #sec2_div {\n  display: flex;\n  position: relative;\n  background-color: #272727ff;\n  padding: 2vw 2vw 2vw 4vw;\n  margin: 0 18vw 14vw 0;\n}\n#sec2_container #sec2_div .left {\n  display: flex;\n  width: 50vw;\n}\n#sec2_container #sec2_div .left img {\n  width: 20vw;\n}\n#sec2_container #sec2_div .left .topbottom_container {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  margin-left: 2vw;\n}\n#sec2_container #sec2_div .left .topbottom_container .top span,\n#sec2_container #sec2_div .left .topbottom_container .top h3,\n#sec2_container #sec2_div .left .topbottom_container .top p {\n  color: #ffffffff;\n}\n#sec2_container #sec2_div .left .topbottom_container .top span {\n  font-family: 'Playfair Display', serif;\n  font-weight: 400;\n  display: swap;\n  font-style: italic;\n  font-size: 1vw;\n}\n#sec2_container #sec2_div .left .topbottom_container .top h3 {\n  font-family: 'Playfair Display', serif;\n  font-weight: 700;\n  display: swap;\n  font-size: 3vw;\n}\n#sec2_container #sec2_div .left .topbottom_container .top p {\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  font-size: 1.4vw;\n  margin-top: 1vw;\n}\n#sec2_container #sec2_div .left .topbottom_container .bottom {\n  background-color: #000000ff;\n  border-radius: 0.4vw;\n  width: -webkit-fit-content;\n  width: -moz-fit-content;\n  width: fit-content;\n  margin: 0 0 1.5vw 1vw;\n  padding: 0.6vw 1.5vw 0.6vw 1.5vw;\n  transition-property: background-color;\n  transition-duration: 500ms;\n}\n#sec2_container #sec2_div .left .topbottom_container .bottom:hover {\n  background-color: #f5e5d9ff;\n}\n#sec2_container #sec2_div .left .topbottom_container .bottom:hover a {\n  color: #000000ff;\n}\n#sec2_container #sec2_div .left .topbottom_container .bottom a {\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  font-size: 1.4vw;\n  color: #ffffffff;\n  transition-property: color;\n  transition-duration: 300ms;\n}\n#sec2_container #sec2_div .right {\n  position: absolute;\n  right: 0;\n  top: 50%;\n  transform: translate(40%, -50%);\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -18672,7 +18798,31 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#secIns_container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  position: relative;\n  margin-bottom: 20vw;\n}\n#secIns_container h4 {\n  font-family: 'Playfair Display', serif;\n  font-weight: 500;\n  display: swap;\n  font-size: 2.5vw;\n  margin-bottom: 3vw;\n  z-index: 100;\n}\n#secIns_container .bottom {\n  z-index: 100;\n  display: flex;\n  justify-content: center;\n  width: 100%;\n}\n#secIns_container .bottom .left {\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n}\n#secIns_container .bottom .left img {\n  height: 100%;\n}\n#secIns_container .bottom .center {\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n  margin: 0 4vw 0 4vw;\n  transform: translateY(15%);\n}\n#secIns_container .bottom .center img {\n  height: 100%;\n}\n#secIns_container .bottom .right {\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n}\n#secIns_container .bottom .right img {\n  height: 100%;\n}\n#secIns_container #middle_draw {\n  position: absolute;\n  z-index: 0;\n  top: 50%;\n  background-color: #272727ff;\n  width: 100%;\n  height: 12vw;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#secIns_container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  position: relative;\n  margin-bottom: 20vw;\n}\n#secIns_container h4 {\n  font-family: 'Playfair Display', serif;\n  font-weight: 500;\n  display: swap;\n  font-size: 2.5vw;\n  margin-bottom: 3vw;\n  z-index: 100;\n}\n#secIns_container .bottom {\n  z-index: 100;\n  display: flex;\n  justify-content: center;\n  width: 100%;\n}\n#secIns_container .bottom .left {\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n  transition-property: transform;\n  transition-duration: 400ms;\n}\n#secIns_container .bottom .left img {\n  height: 100%;\n}\n#secIns_container .bottom .left:hover {\n  transform: scale(1.05);\n}\n#secIns_container .bottom .center {\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n  margin: 0 4vw 0 4vw;\n  transform: translateY(15%);\n  transition-property: transform;\n  transition-duration: 400ms;\n}\n#secIns_container .bottom .center img {\n  height: 100%;\n}\n#secIns_container .bottom .center:hover {\n  transform: scale(1.05) translateY(15%);\n}\n#secIns_container .bottom .right {\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n  transition-property: transform;\n  transition-duration: 400ms;\n}\n#secIns_container .bottom .right img {\n  height: 100%;\n}\n#secIns_container .bottom .right:hover {\n  transform: scale(1.05);\n}\n#secIns_container #middle_draw {\n  position: absolute;\n  z-index: 0;\n  top: 50%;\n  background-color: #272727ff;\n  width: 100%;\n  height: 12vw;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipBanner.vue?vue&type=style&index=0&id=2817427e&lang=scss":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipBanner.vue?vue&type=style&index=0&id=2817427e&lang=scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "div #swiper_banner {\n  width: 35vw;\n  height: 20vw;\n}\ndiv #swiper_banner .slides .banner_imgs {\n  width: 100%;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -33343,9 +33493,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _SwipBanner_vue_vue_type_template_id_2817427e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SwipBanner.vue?vue&type=template&id=2817427e */ "./resources/js/Pages/Components/Swiper/SwipBanner.vue?vue&type=template&id=2817427e");
 /* harmony import */ var _SwipBanner_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SwipBanner.vue?vue&type=script&lang=js */ "./resources/js/Pages/Components/Swiper/SwipBanner.vue?vue&type=script&lang=js");
+/* harmony import */ var _SwipBanner_vue_vue_type_style_index_0_id_2817427e_lang_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./SwipBanner.vue?vue&type=style&index=0&id=2817427e&lang=scss */ "./resources/js/Pages/Components/Swiper/SwipBanner.vue?vue&type=style&index=0&id=2817427e&lang=scss");
 
 
 
+
+;
 _SwipBanner_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__.default.render = _SwipBanner_vue_vue_type_template_id_2817427e__WEBPACK_IMPORTED_MODULE_0__.render
 /* hot reload */
 if (false) {}
@@ -34207,6 +34360,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Pages/Components/Swiper/SwipBanner.vue?vue&type=style&index=0&id=2817427e&lang=scss":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/Pages/Components/Swiper/SwipBanner.vue?vue&type=style&index=0&id=2817427e&lang=scss ***!
+  \**********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipBanner_vue_vue_type_style_index_0_id_2817427e_lang_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-style-loader/index.js!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!../../../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./SwipBanner.vue?vue&type=style&index=0&id=2817427e&lang=scss */ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipBanner.vue?vue&type=style&index=0&id=2817427e&lang=scss");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipBanner_vue_vue_type_style_index_0_id_2817427e_lang_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipBanner_vue_vue_type_style_index_0_id_2817427e_lang_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ var __WEBPACK_REEXPORT_OBJECT__ = {};
+/* harmony reexport (unknown) */ for(const __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipBanner_vue_vue_type_style_index_0_id_2817427e_lang_scss__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== "default") __WEBPACK_REEXPORT_OBJECT__[__WEBPACK_IMPORT_KEY__] = () => _node_modules_vue_style_loader_index_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_use_3_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SwipBanner_vue_vue_type_style_index_0_id_2817427e_lang_scss__WEBPACK_IMPORTED_MODULE_0__[__WEBPACK_IMPORT_KEY__]
+/* harmony reexport (unknown) */ __webpack_require__.d(__webpack_exports__, __WEBPACK_REEXPORT_OBJECT__);
+
+
+/***/ }),
+
 /***/ "./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss&scoped=true":
 /*!************************************************************************************************************************!*\
   !*** ./resources/js/Pages/Components/Swiper/SwipCarousel.vue?vue&type=style&index=0&id=06d9b79c&lang=scss&scoped=true ***!
@@ -34505,6 +34675,27 @@ if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
 var add = __webpack_require__(/*! !../../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
 var update = add("57d9d4da", content, false, {});
+// Hot Module Replacement
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipBanner.vue?vue&type=style&index=0&id=2817427e&lang=scss":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-style-loader/index.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipBanner.vue?vue&type=style&index=0&id=2817427e&lang=scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !!../../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!../../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!../../../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!../../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./SwipBanner.vue?vue&type=style&index=0&id=2817427e&lang=scss */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12.use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12.use[3]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/Pages/Components/Swiper/SwipBanner.vue?vue&type=style&index=0&id=2817427e&lang=scss");
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.id, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__(/*! !../../../../../node_modules/vue-style-loader/lib/addStylesClient.js */ "./node_modules/vue-style-loader/lib/addStylesClient.js").default
+var update = add("ab7769e8", content, false, {});
 // Hot Module Replacement
 if(false) {}
 

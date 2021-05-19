@@ -5,36 +5,84 @@
                 <div>
                     <span>BeGI é ser você</span>
                     <h3>Ser linda nunca foi tão fácil</h3>
-                    <p>Mussum Ipsum, cacilds vidis litro abertis. Praesent vel viverra nisi. Mauris 
-                        aliquet nunc non turpis scelerisque, eget. Casamentiss faiz malandris se 
-                        pirulitá. Per aumento de cachacis, eu reclamis. A ordem dos tratores não altera 
-                        o pão duris.</p>
+                    <p>
+                        Mussum Ipsum, cacilds vidis litro abertis. Praesent vel
+                        viverra nisi. Mauris aliquet nunc non turpis
+                        scelerisque, eget. Casamentiss faiz malandris se
+                        pirulitá. Per aumento de cachacis, eu reclamis. A ordem
+                        dos tratores não altera o pão duris.
+                    </p>
                 </div>
                 <img src="" alt="" />
             </div>
 
             <div id="sec1_right">
-                <div class="div_left card_container">
+                <div class="div_left card_container" @mouseover="showP(1)" @mouseleave="hideP(1)">
                     <img src="images/pictures/image1.jpg" alt="" />
-                    <div>
+                    <div id="toAbove1" data-state="none">
                         <h6>Linha Dark Girls</h6>
-                        <p>A renovada linha gótica que perpassa a história da humanidade. BeGI, BeGothic</p>
+                        <p>
+                            A renovada linha gótica que perpassa a história da
+                            humanidade. BeGI, BeGothic
+                        </p>
+                        <p class="hide_p" id="show_p1">
+                            Mussum Ipsum, cacilds vidis litro abertis. Mais vale
+                            um bebadis conhecidiss, que um alcoolatra anonimis.
+                            Diuretics paradis num copo é motivis de denguis.
+                            Praesent vel viverra nisi. Mauris aliquet nunc non
+                            turpis scelerisque, eget. Em pé sem cair, deitado
+                            sem dormir, sentado sem cochilar e fazendo pose.
+                            Quem manda na minha terra sou euzis! Nec orci ornare
+                            consequat. Praesent lacinia ultrices consectetur.
+                            Sed non ipsum felis. Per aumento de cachacis, eu
+                            reclamis. Admodum accumsan disputationi eu sit. Vide
+                            electram sadipscing et per.
+                        </p>
                     </div>
                 </div>
 
                 <div class="div_right">
-                    <div class="card_container">
+                    <div class="card_container" @mouseover="showP(2)" @mouseleave="hideP(2)">
                         <img src="images/pictures/image4.jpg" alt="" />
-                        <div>
+                        <div id="toAbove2" data-state="none">
                             <h6>Linha Sad Girls:BeSad</h6>
-                            <p>BeGI, BeSad... A beleza é conveniente até mesmo na tristeza</p>
+                            <p>
+                                BeGI, BeSad... A beleza é conveniente até mesmo
+                                na tristeza
+                            </p>
+                            <p class="hide_p" id="show_p2">
+                            Mussum Ipsum, cacilds vidis litro abertis. Mais vale
+                            um bebadis conhecidiss, que um alcoolatra anonimis.
+                            Diuretics paradis num copo é motivis de denguis.
+                            Praesent vel viverra nisi. Mauris aliquet nunc non
+                            turpis scelerisque, eget. Em pé sem cair, deitado
+                            sem dormir, sentado sem cochilar e fazendo pose.
+                            Quem manda na minha terra sou euzis! Nec orci ornare
+                            consequat. Praesent lacinia ultrices consectetur.
+                            Sed non ipsum felis. Per aumento de cachacis, eu
+                            reclamis. Admodum accumsan disputationi eu sit. Vide
+                            electram sadipscing et per.
+                        </p>
                         </div>
                     </div>
-                    <div class="card_container">
+                    <div class="card_container" @mouseover="showP(3)" @mouseleave="hideP(3)">
                         <img src="images/pictures/image2.jpg" alt="" />
-                        <div>
+                        <div id="toAbove3" data-state="none">
                             <h6>Linha Make:BePowder</h6>
                             <p>Porque maquiagem nunca é demais para você</p>
+                            <p class="hide_p" id="show_p3">
+                            Mussum Ipsum, cacilds vidis litro abertis. Mais vale
+                            um bebadis conhecidiss, que um alcoolatra anonimis.
+                            Diuretics paradis num copo é motivis de denguis.
+                            Praesent vel viverra nisi. Mauris aliquet nunc non
+                            turpis scelerisque, eget. Em pé sem cair, deitado
+                            sem dormir, sentado sem cochilar e fazendo pose.
+                            Quem manda na minha terra sou euzis! Nec orci ornare
+                            consequat. Praesent lacinia ultrices consectetur.
+                            Sed non ipsum felis. Per aumento de cachacis, eu
+                            reclamis. Admodum accumsan disputationi eu sit. Vide
+                            electram sadipscing et per.
+                        </p>
                         </div>
                     </div>
                 </div>
@@ -44,99 +92,129 @@
 </template>
 
 <script>
-export default {};
+export default {
+    methods:{
+        showP: function(el){
+            var elementP = document.querySelector('#show_p'+el),
+                elementDiv = document.querySelector('#toAbove'+el);
+            elementP.style.display = 'block';
+            elementDiv.dataset.state = 'show';
+            console.log(elementP);
+            console.log(elementDiv);
+            
+        },
+        hideP: function(el) {
+            var elementP = document.querySelector('#show_p'+el),
+                elementDiv = document.querySelector('#toAbove'+el);
+            elementP.style.display = 'none';
+            elementDiv.dataset.state = 'hide';
+            console.log(elementP);
+            console.log(elementDiv);
+
+        },
+    }
+};
 </script>
 
 <style lang="scss">
-@import 'resources/css/sass/allImports';
+@import "resources/css/sass/allImports";
 
-
-#sec1_container{
+#sec1_container {
     display: flex;
     background-color: $notblack;
     margin: 0 0vw 34vw 0;
-    
 
     // position: relative;
     // height: 50%;
     // width: 100%;
 
     padding: 2vw 2vw 20vw 2vw;
-    
+
     justify-content: space-between;
     align-items: flex-start;
-    
-    #sec1_left{
+
+    #sec1_left {
         width: 38vw;
         margin-right: 5vw;
         margin-top: 6vw;
 
-        div{
-            
-            span, h3, p{
+        div {
+            span,
+            h3,
+            p {
                 color: $notwhite;
             }
-            span{
+            span {
                 @include Font3_SI();
-                font-size: 1vw
+                font-size: 1vw;
             }
-            h3{
+            h3 {
                 @include Font1_S();
-                font-size: 3vw
+                font-size: 3vw;
             }
-            p{
+            p {
                 @include Font2_SS();
                 font-size: 1.4vw;
                 margin-top: 1vw;
             }
         }
     }
-    #sec1_right{
+    #sec1_right {
         width: 64vw;
 
-        
-        h6, p{
+        h6,
+        p {
             color: $notwhite;
             padding: 0 2vw 0 2vw;
-            
         }
-        h6{
+        h6 {
             @include Font2_S();
             font-size: 1.5vw;
             margin-top: 1vw;
             margin-bottom: 0.4vw;
-
         }
-        p{
+        p {
             @include Font2_SSI();
             font-size: 1vw;
         }
 
-        .div_left{
+        .hide_p{
+            display: none;
+        }
+        .div_left {
             position: absolute;
             transform: translateY(10%);
             width: 28vw;
-            img{
+            img {
                 width: 100%;
             }
         }
-        .div_right{
+        .div_right {
             position: absolute;
 
             right: 0vw;
 
             width: 28vw;
-            img{
+            img {
                 width: 100%;
             }
         }
-        .card_container{
+        .card_container {
             margin: 0vw 2vw 2.5vw 0;
             padding: 0 0 1.6vw 0;
             text-align: center;
             background-color: $black;
 
             height: fit-content;
+        }
+
+
+        @import 'resources/css/sass/components/Section2/animations';
+        [data-state="hide"]{
+            
+        }
+        [data-state="show"]{
+
         }
     }
 }

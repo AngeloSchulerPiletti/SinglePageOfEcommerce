@@ -42,12 +42,14 @@ export default {
 
 #sec2_container {
     #sec2_div {
-        // display: flex;
+        display: flex;
+
+        position: relative;
 
         background-color: $notblack;
 
         padding: 2vw 2vw 2vw 4vw;
-        margin: 0 12vw 14vw 0;
+        margin: 0 18vw 14vw 0;
 
         .left {
             display: flex;
@@ -116,6 +118,10 @@ export default {
         }
         .right {
             position: absolute;
+            right: 0;
+            top: 50%;
+
+            transform: translate(40%, -50%);           
         }
     }
 }

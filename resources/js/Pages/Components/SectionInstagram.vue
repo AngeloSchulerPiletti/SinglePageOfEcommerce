@@ -61,15 +61,24 @@ export default {};
 
         .left {
             @include horizontalDivs();
+            @include instagramZoom();
         }
         .center {
             @include horizontalDivs();
-            
+
             margin: 0 4vw 0 4vw;
             transform: translateY(15%);
+
+            transition-property: transform;
+            transition-duration: 400ms;
+
+            &:hover {
+                transform: scale(1.05) translateY(15%);
+            }
         }
         .right {
             @include horizontalDivs();
+            @include instagramZoom();
         }
     }
     #middle_draw {
