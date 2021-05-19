@@ -50,9 +50,6 @@ nav {
     transition-property: padding;
     transition-duration: 200ms;
 
-    &:hover {
-        padding: 0.6vw 1vw 0.6vw 1vw;
-    }
 
     .left {
         width: 12vw;

@@ -9,6 +9,9 @@ import SwipCarousel from "./Swiper/SwipCarousel";
 export default {
     components:{
         SwipCar: SwipCarousel,
+    },
+    props:{
+        // scrollData: Object,
     }
 }
 </script>

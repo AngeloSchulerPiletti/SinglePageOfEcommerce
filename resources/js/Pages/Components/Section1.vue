@@ -1,6 +1,6 @@
 <template>
-    <section>
-        <div id="sec1_container">
+    <section :class="state+'_container'">
+        <div class="sec1_container" :class="state+'_left'">
             <div id="sec1_left">
                 <div>
                     <span>BeGI é ser você</span>
@@ -16,7 +16,7 @@
                 <img src="" alt="" />
             </div>
 
-            <div id="sec1_right">
+            <div id="sec1_right" :class="state+'_right'">
                 <div class="div_left">
                     <div
                         class="card_container"
@@ -124,6 +124,7 @@
 
 <script>
 export default {
+
     methods: {
         showP: function (el) {
             var elementAbove = document.querySelector("#toAbove" + el),
@@ -140,16 +141,21 @@ export default {
             setTimeout(function(){
                 elementAbove.style.display = "none";
             }, 600)
-            
         },
+
     },
+    props:{
+        state: String,
+
+    },
+
 };
 </script>
 
 <style lang="scss">
 @import "resources/css/sass/allImports";
 
-#sec1_container {
+.sec1_container {
     display: flex;
     background-color: $notblack;
     margin: 0 0vw 34vw 0;
@@ -254,5 +260,37 @@ export default {
 
         }
     }
+}
+
+@include section1_anim();
+
+.none_container{
+    opacity: 0;
+}
+.show_container{
+    opacity: 1;
+}
+
+
+
+
+.none_left{
+    opacity: 0;
+}
+// .hide_left{
+//     animation: hiding_left 500ms ease-out 200ms 1 normal both;
+// }
+.show_left{
+    animation: showing_left 600ms ease-out 0ms 1 normal both;
+}
+
+.none_right{
+    opacity: 0;
+}
+// .hide_rigth{
+//     animation: hiding_right 200ms ease-out 0ms 1 normal both;
+// }
+.show_right{
+    animation: showing_right 400ms ease-out 600ms 1 normal both;
 }
 </style>

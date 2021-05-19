@@ -1,6 +1,6 @@
 <template>
-    <section id="sec2_container">
-        <div id="sec2_div">
+    <section :class="'sec2_container '+state+'_container'">
+        <div id="sec2_div" :class="state+'_left'">
             <div class="left">
                 <img src="images/pictures/image10.jpg" alt="" />
                 <div class="topbottom_container">
@@ -21,7 +21,7 @@
                 </div>
             </div>
 
-            <div class="right">
+            <div :class="'right '+state+'_right'">
                 <SwipBan />
             </div>
         </div>
@@ -34,13 +34,16 @@ export default {
     components: {
         SwipBan: SwipBanner,
     },
+    props:{
+        state: String,
+    },
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "resources/css/sass/allImports";
 
-#sec2_container {
+.sec2_container {
     #sec2_div {
         display: flex;
 
@@ -124,5 +127,42 @@ export default {
             transform: translate(40%, -50%);           
         }
     }
+}
+
+
+
+
+@include section2_anim();
+
+.none_container{
+    opacity: 0;
+}
+.show_container{
+    opacity: 1;
+}
+
+
+
+
+.none_left{
+    opacity: 0;
+}
+.hide_left{
+    animation: hiding_left 300ms ease-out 000ms 1 normal both;
+}
+.show_left{
+    animation: showing_left 300ms ease-out 0ms 1 normal both;
+}
+
+.none_right{
+    opacity: 0;
+}
+.hide_right{
+    animation: hiding_right 200ms ease-out 0ms 1 normal both;
+     
+}
+.show_right{
+    animation: showing_right 400ms ease-out 600ms 1 normal both;
+     
 }
 </style>

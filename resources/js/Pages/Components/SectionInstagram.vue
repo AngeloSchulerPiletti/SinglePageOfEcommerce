@@ -1,9 +1,9 @@
 <template>
-    <section id="secIns_container">
-        <a href="https://www.instagram.com/mussum_sinceris/"
+    <section :class="'secIns_container '+state+'_container'">
+        <a :class="state+'_centertop'" href="https://www.instagram.com/mussum_sinceris/"
             ><h4>@begi_forevis</h4></a
         >
-        <div class="bottom">
+        <div :class="'bottom '+state+'_right'">
             <div class="left">
                 <inertia-link>
                     <img src="images/pictures/image11.jpg" alt="" />
@@ -25,19 +25,23 @@
                 </inertia-link>
             </div>
         </div>
-        <div id="middle_draw"></div>
+        <div id="middle_draw" :class="state+'_left'"></div>
     </section>
 </template>
 
 <script>
-export default {};
+export default {
+    props:{
+        state: String,
+    },
+};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "resources/css/sass/allImports";
 @import "resources/css/sass/Components/SectionInstagram/mixins";
 
-#secIns_container {
+.secIns_container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,4 +96,51 @@ export default {};
         height: 12vw;
     }
 }
+
+
+
+
+@include section3_anim();
+
+.none_container{
+    opacity: 0;
+}
+.show_container{
+    opacity: 1;
+}
+
+
+
+
+.none_centertop{
+    opacity: 0;
+}
+.hide_centertop{
+    animation: hiding_centertop 200ms ease-out 0ms 1 normal both;
+}
+.show_centertop{
+    animation: showing_centertop 400ms ease-out 400ms 1 normal both;
+}
+
+.none_left{
+    opacity: 0;
+}
+.hide_left{
+    animation: hiding_left 200ms ease-out 0ms 1 normal both;
+}
+.show_left{
+    animation: showing_left 450ms ease-out 0ms 1 normal both;
+}
+
+.none_right{
+    opacity: 0;
+}
+.hide_right{
+    animation: hiding_right 200ms ease-out 0ms 1 normal both;
+}
+.show_right{
+    animation: showing_right 400ms ease-out 400ms 1 normal both;
+}
+
+
 </style>
