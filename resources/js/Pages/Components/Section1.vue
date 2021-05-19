@@ -17,72 +17,103 @@
             </div>
 
             <div id="sec1_right">
-                <div class="div_left card_container" @mouseover="showP(1)" @mouseleave="hideP(1)">
-                    <img src="images/pictures/image1.jpg" alt="" />
-                    <div id="toAbove1" data-state="none">
-                        <h6>Linha Dark Girls</h6>
-                        <p>
-                            A renovada linha gótica que perpassa a história da
-                            humanidade. BeGI, BeGothic
-                        </p>
-                        <p class="hide_p" id="show_p1">
-                            Mussum Ipsum, cacilds vidis litro abertis. Mais vale
-                            um bebadis conhecidiss, que um alcoolatra anonimis.
-                            Diuretics paradis num copo é motivis de denguis.
-                            Praesent vel viverra nisi. Mauris aliquet nunc non
-                            turpis scelerisque, eget. Em pé sem cair, deitado
-                            sem dormir, sentado sem cochilar e fazendo pose.
-                            Quem manda na minha terra sou euzis! Nec orci ornare
-                            consequat. Praesent lacinia ultrices consectetur.
-                            Sed non ipsum felis. Per aumento de cachacis, eu
-                            reclamis. Admodum accumsan disputationi eu sit. Vide
-                            electram sadipscing et per.
-                        </p>
+                <div class="div_left">
+                    <div
+                        class="card_container"
+                        id="card1"
+                        @mouseover="showP(1)"
+                        @mouseleave="hideP(1)"
+                    >
+                        <img src="images/pictures/image1.jpg" alt="" />
+                        <div id="toBelow1">
+                            <h6>Linha Dark Girls</h6>
+                            <p>
+                                A renovada linha gótica que perpassa a história
+                                da humanidade. BeGI, BeGothic
+                            </p>
+                        </div>
+                        <div id="toAbove1" data-state="none">
+                            <h6>Linha Dark Girls</h6>
+                            <p>
+                                A renovada linha gótica que perpassa a história
+                                da humanidade. BeGI, BeGothic
+                            </p>
+                            <p id="show_p1">
+                                Mussum Ipsum, cacilds vidis litro abertis. Mais
+                                vale um bebadis conhecidiss, que um alcoolatra
+                                anonimis. Diuretics paradis num copo é motivis
+                                de denguis. Praesent vel viverra nisi. Mauris
+                                aliquet nunc non turpis scelerisque, eget. Em pé
+                                sem cair, deitado sem dormir, sentado sem
+                                cochilar e fazendo pose. Quem manda na minha
+                                terra sou euzis! Nec orci ornare consequat.
+                                Praesent lacinia ultrices consectetur. Sed non
+                                ipsum felis. Per aumento de cachacis, eu
+                                reclamis. Admodum accumsan disputationi eu sit.
+                                Vide electram sadipscing et per.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="div_right">
-                    <div class="card_container" @mouseover="showP(2)" @mouseleave="hideP(2)">
+                    <div
+                        class="card_container"
+                        id="card2"
+                        @mouseover="showP(2)"
+                        @mouseleave="hideP(2)"
+                    >
                         <img src="images/pictures/image4.jpg" alt="" />
+                        <div id="toBelow2">
+                            <h6>Linha Sad Girls:BeSad</h6>
+                            <p>
+                                BeGI, BeSad... A beleza é conveniente até mesmo
+                                na tristeza
+                            </p>
+                        </div>
                         <div id="toAbove2" data-state="none">
                             <h6>Linha Sad Girls:BeSad</h6>
                             <p>
                                 BeGI, BeSad... A beleza é conveniente até mesmo
                                 na tristeza
                             </p>
-                            <p class="hide_p" id="show_p2">
-                            Mussum Ipsum, cacilds vidis litro abertis. Mais vale
-                            um bebadis conhecidiss, que um alcoolatra anonimis.
-                            Diuretics paradis num copo é motivis de denguis.
-                            Praesent vel viverra nisi. Mauris aliquet nunc non
-                            turpis scelerisque, eget. Em pé sem cair, deitado
-                            sem dormir, sentado sem cochilar e fazendo pose.
-                            Quem manda na minha terra sou euzis! Nec orci ornare
-                            consequat. Praesent lacinia ultrices consectetur.
-                            Sed non ipsum felis. Per aumento de cachacis, eu
-                            reclamis. Admodum accumsan disputationi eu sit. Vide
-                            electram sadipscing et per.
-                        </p>
+                            <p id="show_p2">
+                                Mussum Ipsum, cacilds vidis litro abertis. Mais
+                                vale um bebadis conhecidiss, que um alcoolatra
+                                anonimis. Diuretics paradis num copo é motivis
+                                de denguis. Praesent vel viverra nisi. Mauris
+                                aliquet nunc non turpis scelerisque, eget.
+                            </p>
                         </div>
                     </div>
-                    <div class="card_container" @mouseover="showP(3)" @mouseleave="hideP(3)">
+                    <div
+                        class="card_container"
+                        id="card3"
+                        @mouseover="showP(3)"
+                        @mouseleave="hideP(3)"
+                    >
                         <img src="images/pictures/image2.jpg" alt="" />
+                        <div id="toBelow3">
+                            <h6>Linha Make:BePowder</h6>
+                            <p>Porque maquiagem nunca é demais para você</p>
+                        </div>
                         <div id="toAbove3" data-state="none">
                             <h6>Linha Make:BePowder</h6>
                             <p>Porque maquiagem nunca é demais para você</p>
-                            <p class="hide_p" id="show_p3">
-                            Mussum Ipsum, cacilds vidis litro abertis. Mais vale
-                            um bebadis conhecidiss, que um alcoolatra anonimis.
-                            Diuretics paradis num copo é motivis de denguis.
-                            Praesent vel viverra nisi. Mauris aliquet nunc non
-                            turpis scelerisque, eget. Em pé sem cair, deitado
-                            sem dormir, sentado sem cochilar e fazendo pose.
-                            Quem manda na minha terra sou euzis! Nec orci ornare
-                            consequat. Praesent lacinia ultrices consectetur.
-                            Sed non ipsum felis. Per aumento de cachacis, eu
-                            reclamis. Admodum accumsan disputationi eu sit. Vide
-                            electram sadipscing et per.
-                        </p>
+                            <p id="show_p3">
+                                Mussum Ipsum, cacilds vidis litro abertis. Mais
+                                vale um bebadis conhecidiss, que um alcoolatra
+                                anonimis. Diuretics paradis num copo é motivis
+                                de denguis. Praesent vel viverra nisi. Mauris
+                                aliquet nunc non turpis scelerisque, eget. Em pé
+                                sem cair, deitado sem dormir, sentado sem
+                                cochilar e fazendo pose. Quem manda na minha
+                                terra sou euzis! Nec orci ornare consequat.
+                                Praesent lacinia ultrices consectetur. Sed non
+                                ipsum felis. Per aumento de cachacis, eu
+                                reclamis. Admodum accumsan disputationi eu sit.
+                                Vide electram sadipscing et per.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -93,26 +124,26 @@
 
 <script>
 export default {
-    methods:{
-        showP: function(el){
-            var elementP = document.querySelector('#show_p'+el),
-                elementDiv = document.querySelector('#toAbove'+el);
-            elementP.style.display = 'block';
-            elementDiv.dataset.state = 'show';
-            console.log(elementP);
-            console.log(elementDiv);
-            
-        },
-        hideP: function(el) {
-            var elementP = document.querySelector('#show_p'+el),
-                elementDiv = document.querySelector('#toAbove'+el);
-            elementP.style.display = 'none';
-            elementDiv.dataset.state = 'hide';
-            console.log(elementP);
-            console.log(elementDiv);
+    methods: {
+        showP: function (el) {
+            var elementP = document.querySelector("#show_p" + el),
+                elementBelow = document.querySelector("#toBelow" + el),
+                elementAbove = document.querySelector("#toAbove" + el),
+                elementCard = document.querySelector("#card" + el);
 
+            elementBelow.style.opacity = "0";
+            elementAbove.dataset.state = "show";
         },
-    }
+        hideP: function (el) {
+            var elementP = document.querySelector("#show_p" + el),
+                elementAbove = document.querySelector("#toAbove" + el),
+                elementBelow = document.querySelector("#toBelow" + el),
+                elementCard = document.querySelector("#card" + el);
+
+            elementBelow.style.opacity = "1";
+            elementAbove.dataset.state = "hide";
+        },
+    },
 };
 </script>
 
@@ -178,9 +209,6 @@ export default {
             font-size: 1vw;
         }
 
-        .hide_p{
-            display: none;
-        }
         .div_left {
             position: absolute;
             transform: translateY(10%);
@@ -200,6 +228,8 @@ export default {
             }
         }
         .card_container {
+            position: relative;
+
             margin: 0vw 2vw 2.5vw 0;
             padding: 0 0 1.6vw 0;
             text-align: center;
@@ -208,13 +238,26 @@ export default {
             height: fit-content;
         }
 
-
-        @import 'resources/css/sass/components/Section2/animations';
-        [data-state="hide"]{
-            
+        @import "resources/css/sass/components/Section2/animations";
+        [data-state] {
+            transition-duration: 450ms;
+            transition-property: background-color, height;
         }
-        [data-state="show"]{
+        [data-state="none"] {
+            display: none;
+        }
+        [data-state="hide"] {
+            display: none;
+        }
+        [data-state="show"] {
+            position: absolute;
+            display: block;
 
+            padding-top: 5%;
+            top: 0;
+            bottom: 0;
+
+            background-color: #000000d9;
         }
     }
 }

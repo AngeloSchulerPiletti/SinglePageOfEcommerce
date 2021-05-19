@@ -16818,20 +16818,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   methods: {
     showP: function showP(el) {
-      var elementP = document.querySelector('#show_p' + el),
-          elementDiv = document.querySelector('#toAbove' + el);
-      elementP.style.display = 'block';
-      elementDiv.dataset.state = 'show';
-      console.log(elementP);
-      console.log(elementDiv);
+      var elementP = document.querySelector("#show_p" + el),
+          elementBelow = document.querySelector("#toBelow" + el),
+          elementAbove = document.querySelector("#toAbove" + el),
+          elementCard = document.querySelector("#card" + el);
+      elementBelow.style.opacity = "0";
+      elementAbove.dataset.state = "show";
     },
     hideP: function hideP(el) {
-      var elementP = document.querySelector('#show_p' + el),
-          elementDiv = document.querySelector('#toAbove' + el);
-      elementP.style.display = 'none';
-      elementDiv.dataset.state = 'hide';
-      console.log(elementP);
-      console.log(elementDiv);
+      var elementP = document.querySelector("#show_p" + el),
+          elementAbove = document.querySelector("#toAbove" + el),
+          elementBelow = document.querySelector("#toBelow" + el),
+          elementCard = document.querySelector("#card" + el);
+      elementBelow.style.opacity = "1";
+      elementAbove.dataset.state = "hide";
     }
   }
 });
@@ -17914,92 +17914,113 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 var _hoisted_3 = {
   id: "sec1_right"
 };
+var _hoisted_4 = {
+  "class": "div_left"
+};
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
   src: "images/pictures/image1.jpg",
   alt: ""
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  id: "toBelow1"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Linha Dark Girls"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " A renovada linha gótica que perpassa a história da humanidade. BeGI, BeGothic ")], -1
+/* HOISTED */
+);
+
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   id: "toAbove1",
   "data-state": "none"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Linha Dark Girls"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " A renovada linha gótica que perpassa a história da humanidade. BeGI, BeGothic "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
-  "class": "hide_p",
   id: "show_p1"
 }, " Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Diuretics paradis num copo é motivis de denguis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Quem manda na minha terra sou euzis! Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Per aumento de cachacis, eu reclamis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. ")], -1
 /* HOISTED */
 );
 
-var _hoisted_6 = {
+var _hoisted_8 = {
   "class": "div_right"
 };
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
   src: "images/pictures/image4.jpg",
   alt: ""
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  id: "toAbove2",
-  "data-state": "none"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Linha Sad Girls:BeSad"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " BeGI, BeSad... A beleza é conveniente até mesmo na tristeza "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
-  "class": "hide_p",
-  id: "show_p2"
-}, " Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Diuretics paradis num copo é motivis de denguis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Quem manda na minha terra sou euzis! Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Per aumento de cachacis, eu reclamis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. ")], -1
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  id: "toBelow2"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Linha Sad Girls:BeSad"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " BeGI, BeSad... A beleza é conveniente até mesmo na tristeza ")], -1
 /* HOISTED */
 );
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  id: "toAbove2",
+  "data-state": "none"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Linha Sad Girls:BeSad"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " BeGI, BeSad... A beleza é conveniente até mesmo na tristeza "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
+  id: "show_p2"
+}, " Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Diuretics paradis num copo é motivis de denguis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. ")], -1
+/* HOISTED */
+);
+
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
   src: "images/pictures/image2.jpg",
   alt: ""
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  id: "toBelow3"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Linha Make:BePowder"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, "Porque maquiagem nunca é demais para você")], -1
+/* HOISTED */
+);
+
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   id: "toAbove3",
   "data-state": "none"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Linha Make:BePowder"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, "Porque maquiagem nunca é demais para você"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
-  "class": "hide_p",
   id: "show_p3"
 }, " Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Diuretics paradis num copo é motivis de denguis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Quem manda na minha terra sou euzis! Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Per aumento de cachacis, eu reclamis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. ")], -1
 /* HOISTED */
 );
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("section", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-    "class": "div_left card_container",
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("section", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+    "class": "card_container",
+    id: "card1",
     onMouseover: _cache[1] || (_cache[1] = function ($event) {
       return $options.showP(1);
     }),
     onMouseleave: _cache[2] || (_cache[2] = function ($event) {
       return $options.hideP(1);
     })
-  }, [_hoisted_4, _hoisted_5], 32
+  }, [_hoisted_5, _hoisted_6, _hoisted_7], 32
   /* HYDRATE_EVENTS */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
     "class": "card_container",
+    id: "card2",
     onMouseover: _cache[3] || (_cache[3] = function ($event) {
       return $options.showP(2);
     }),
     onMouseleave: _cache[4] || (_cache[4] = function ($event) {
       return $options.hideP(2);
     })
-  }, [_hoisted_7, _hoisted_8], 32
+  }, [_hoisted_9, _hoisted_10, _hoisted_11], 32
   /* HYDRATE_EVENTS */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
     "class": "card_container",
+    id: "card3",
     onMouseover: _cache[5] || (_cache[5] = function ($event) {
       return $options.showP(3);
     }),
     onMouseleave: _cache[6] || (_cache[6] = function ($event) {
       return $options.hideP(3);
     })
-  }, [_hoisted_9, _hoisted_10], 32
+  }, [_hoisted_12, _hoisted_13, _hoisted_14], 32
   /* HYDRATE_EVENTS */
   )])])])]);
 }
@@ -18750,7 +18771,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#sec1_container {\n  display: flex;\n  background-color: #272727ff;\n  margin: 0 0vw 34vw 0;\n  padding: 2vw 2vw 20vw 2vw;\n  justify-content: space-between;\n  align-items: flex-start;\n}\n#sec1_container #sec1_left {\n  width: 38vw;\n  margin-right: 5vw;\n  margin-top: 6vw;\n}\n#sec1_container #sec1_left div span,\n#sec1_container #sec1_left div h3,\n#sec1_container #sec1_left div p {\n  color: #f6f6f6ff;\n}\n#sec1_container #sec1_left div span {\n  font-family: 'Playfair Display', serif;\n  font-weight: 400;\n  display: swap;\n  font-style: italic;\n  font-size: 1vw;\n}\n#sec1_container #sec1_left div h3 {\n  font-family: 'Playfair Display', serif;\n  font-weight: 700;\n  display: swap;\n  font-size: 3vw;\n}\n#sec1_container #sec1_left div p {\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  font-size: 1.4vw;\n  margin-top: 1vw;\n}\n#sec1_container #sec1_right {\n  width: 64vw;\n}\n#sec1_container #sec1_right h6,\n#sec1_container #sec1_right p {\n  color: #f6f6f6ff;\n  padding: 0 2vw 0 2vw;\n}\n#sec1_container #sec1_right h6 {\n  font-family: 'Playfair Display', serif;\n  font-weight: 500;\n  display: swap;\n  font-size: 1.5vw;\n  margin-top: 1vw;\n  margin-bottom: 0.4vw;\n}\n#sec1_container #sec1_right p {\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  font-style: italic;\n  font-size: 1vw;\n}\n#sec1_container #sec1_right .hide_p {\n  display: none;\n}\n#sec1_container #sec1_right .div_left {\n  position: absolute;\n  transform: translateY(10%);\n  width: 28vw;\n}\n#sec1_container #sec1_right .div_left img {\n  width: 100%;\n}\n#sec1_container #sec1_right .div_right {\n  position: absolute;\n  right: 0vw;\n  width: 28vw;\n}\n#sec1_container #sec1_right .div_right img {\n  width: 100%;\n}\n#sec1_container #sec1_right .card_container {\n  margin: 0vw 2vw 2.5vw 0;\n  padding: 0 0 1.6vw 0;\n  text-align: center;\n  background-color: #000000ff;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#sec1_container {\n  display: flex;\n  background-color: #272727ff;\n  margin: 0 0vw 34vw 0;\n  padding: 2vw 2vw 20vw 2vw;\n  justify-content: space-between;\n  align-items: flex-start;\n}\n#sec1_container #sec1_left {\n  width: 38vw;\n  margin-right: 5vw;\n  margin-top: 6vw;\n}\n#sec1_container #sec1_left div span,\n#sec1_container #sec1_left div h3,\n#sec1_container #sec1_left div p {\n  color: #f6f6f6ff;\n}\n#sec1_container #sec1_left div span {\n  font-family: 'Playfair Display', serif;\n  font-weight: 400;\n  display: swap;\n  font-style: italic;\n  font-size: 1vw;\n}\n#sec1_container #sec1_left div h3 {\n  font-family: 'Playfair Display', serif;\n  font-weight: 700;\n  display: swap;\n  font-size: 3vw;\n}\n#sec1_container #sec1_left div p {\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  font-size: 1.4vw;\n  margin-top: 1vw;\n}\n#sec1_container #sec1_right {\n  width: 64vw;\n}\n#sec1_container #sec1_right h6,\n#sec1_container #sec1_right p {\n  color: #f6f6f6ff;\n  padding: 0 2vw 0 2vw;\n}\n#sec1_container #sec1_right h6 {\n  font-family: 'Playfair Display', serif;\n  font-weight: 500;\n  display: swap;\n  font-size: 1.5vw;\n  margin-top: 1vw;\n  margin-bottom: 0.4vw;\n}\n#sec1_container #sec1_right p {\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  font-style: italic;\n  font-size: 1vw;\n}\n#sec1_container #sec1_right .div_left {\n  position: absolute;\n  transform: translateY(10%);\n  width: 28vw;\n}\n#sec1_container #sec1_right .div_left img {\n  width: 100%;\n}\n#sec1_container #sec1_right .div_right {\n  position: absolute;\n  right: 0vw;\n  width: 28vw;\n}\n#sec1_container #sec1_right .div_right img {\n  width: 100%;\n}\n#sec1_container #sec1_right .card_container {\n  position: relative;\n  margin: 0vw 2vw 2.5vw 0;\n  padding: 0 0 1.6vw 0;\n  text-align: center;\n  background-color: #000000ff;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n#sec1_container #sec1_right [data-state] {\n  transition-duration: 450ms;\n  transition-property: background-color, height;\n}\n#sec1_container #sec1_right [data-state=\"none\"] {\n  display: none;\n}\n#sec1_container #sec1_right [data-state=\"hide\"] {\n  display: none;\n}\n#sec1_container #sec1_right [data-state=\"show\"] {\n  position: absolute;\n  display: block;\n  padding-top: 5%;\n  top: 0;\n  bottom: 0;\n  background-color: #000000d9;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
