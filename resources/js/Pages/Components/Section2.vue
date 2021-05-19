@@ -48,7 +48,7 @@ export default {
 
         background-color: $notblack;
 
-        padding: 2vw 2vw 2vw 4vw;
+        padding: 3vw 3vw 3vw 5vw;
         margin: 0 18vw 14vw 0;
 
         .left {

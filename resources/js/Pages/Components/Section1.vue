@@ -25,14 +25,14 @@
                         @mouseleave="hideP(1)"
                     >
                         <img src="images/pictures/image1.jpg" alt="" />
-                        <div id="toBelow1">
+                        <div>
                             <h6>Linha Dark Girls</h6>
                             <p>
                                 A renovada linha gótica que perpassa a história
                                 da humanidade. BeGI, BeGothic
                             </p>
                         </div>
-                        <div id="toAbove1" data-state="none">
+                        <div id="toAbove1" data-state="none" style="display: none;">
                             <h6>Linha Dark Girls</h6>
                             <p>
                                 A renovada linha gótica que perpassa a história
@@ -64,14 +64,14 @@
                         @mouseleave="hideP(2)"
                     >
                         <img src="images/pictures/image4.jpg" alt="" />
-                        <div id="toBelow2">
+                        <div>
                             <h6>Linha Sad Girls:BeSad</h6>
                             <p>
                                 BeGI, BeSad... A beleza é conveniente até mesmo
                                 na tristeza
                             </p>
                         </div>
-                        <div id="toAbove2" data-state="none">
+                        <div id="toAbove2" data-state="none" style="display: none;">
                             <h6>Linha Sad Girls:BeSad</h6>
                             <p>
                                 BeGI, BeSad... A beleza é conveniente até mesmo
@@ -93,11 +93,11 @@
                         @mouseleave="hideP(3)"
                     >
                         <img src="images/pictures/image2.jpg" alt="" />
-                        <div id="toBelow3">
+                        <div>
                             <h6>Linha Make:BePowder</h6>
                             <p>Porque maquiagem nunca é demais para você</p>
                         </div>
-                        <div id="toAbove3" data-state="none">
+                        <div id="toAbove3" data-state="none" style="display: none;">
                             <h6>Linha Make:BePowder</h6>
                             <p>Porque maquiagem nunca é demais para você</p>
                             <p id="show_p3">
@@ -126,22 +126,21 @@
 export default {
     methods: {
         showP: function (el) {
-            var elementP = document.querySelector("#show_p" + el),
-                elementBelow = document.querySelector("#toBelow" + el),
-                elementAbove = document.querySelector("#toAbove" + el),
+            var elementAbove = document.querySelector("#toAbove" + el),
                 elementCard = document.querySelector("#card" + el);
 
-            elementBelow.style.opacity = "0";
+            elementAbove.style.display = "block";
             elementAbove.dataset.state = "show";
         },
         hideP: function (el) {
-            var elementP = document.querySelector("#show_p" + el),
-                elementAbove = document.querySelector("#toAbove" + el),
-                elementBelow = document.querySelector("#toBelow" + el),
+            var elementAbove = document.querySelector("#toAbove" + el),
                 elementCard = document.querySelector("#card" + el);
 
-            elementBelow.style.opacity = "1";
             elementAbove.dataset.state = "hide";
+            setTimeout(function(){
+                elementAbove.style.display = "none";
+            }, 600)
+            
         },
     },
 };
@@ -154,10 +153,6 @@ export default {
     display: flex;
     background-color: $notblack;
     margin: 0 0vw 34vw 0;
-
-    // position: relative;
-    // height: 50%;
-    // width: 100%;
 
     padding: 2vw 2vw 20vw 2vw;
 
@@ -239,25 +234,24 @@ export default {
         }
 
         @import "resources/css/sass/components/Section2/animations";
-        [data-state] {
-            transition-duration: 450ms;
-            transition-property: background-color, height;
-        }
-        [data-state="none"] {
-            display: none;
-        }
-        [data-state="hide"] {
-            display: none;
-        }
         [data-state="show"] {
             position: absolute;
-            display: block;
 
             padding-top: 5%;
             top: 0;
             bottom: 0;
 
-            background-color: #000000d9;
+            animation: showAnim 500ms ease-out 0ms 1 normal both;
+        }
+        [data-state="hide"]{
+            position: absolute;
+
+            padding-top: 5%;
+            top: 0;
+            bottom: 0;
+
+            animation: hideAnim 500ms ease-in 0ms 1 normal both;;
+
         }
     }
 }
