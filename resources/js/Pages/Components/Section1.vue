@@ -71,7 +71,7 @@
                     >
                         <img src="images/pictures/image4.jpg" alt="" />
                         <div>
-                            <h6>Linha Sad Girls:BeSad</h6>
+                            <h6>Linha Sad Girls: BeSad</h6>
                             <p>
                                 BeGI, BeSad... A beleza é conveniente até mesmo
                                 na tristeza
@@ -82,7 +82,7 @@
                             data-state="none"
                             style="display: none"
                         >
-                            <h6>Linha Sad Girls:BeSad</h6>
+                            <h6>Linha Sad Girls: BeSad</h6>
                             <p>
                                 BeGI, BeSad... A beleza é conveniente até mesmo
                                 na tristeza
@@ -104,7 +104,7 @@
                     >
                         <img src="images/pictures/image2.jpg" alt="" />
                         <div>
-                            <h6>Linha Make:BePowder</h6>
+                            <h6>Linha Make: BePowder</h6>
                             <p>Porque maquiagem nunca é demais para você</p>
                         </div>
                         <div
@@ -112,7 +112,7 @@
                             data-state="none"
                             style="display: none"
                         >
-                            <h6>Linha Make:BePowder</h6>
+                            <h6>Linha Make: BePowder</h6>
                             <p>Porque maquiagem nunca é demais para você</p>
                             <p>
                                 Mussum Ipsum, cacilds vidis litro abertis. Mais
@@ -130,6 +130,8 @@
                             </p>
                         </div>
                     </div>
+                    <!-- I inserted this herer because it was the most convenient place i found -->
+                    <div id="background_div"></div>
                 </div>
             </div>
         </div>
@@ -169,15 +171,15 @@ export default {
 <style lang="scss" scoped>
 @import "resources/css/sass/allImports";
 
-
-
 //+----------------------------------------+
 //|               ESTILO GERAL             |
 //+----------------------------------------+
-
+#background_div {
+    display: none;
+}
 .sec1_container {
     display: flex;
-    background-color: $notblack;
+    background-color: $black;
     margin: 0 0vw 34vw 0;
 
     padding: 2vw 2vw 20vw 2vw;
@@ -236,16 +238,17 @@ export default {
         p {
             color: $notwhite;
             padding: 0 2vw 0 2vw;
+            font-size: 1.3vw;
         }
         h6 {
             @include Font2_S();
-            font-size: 1.5vw;
+            font-size: 1.8vw;
             margin-top: 1vw;
             margin-bottom: 0.4vw;
         }
         p {
             @include Font2_SSI();
-            font-size: 1vw;
+            font-size: 1.3vw;
         }
 
         .div_left {
@@ -272,17 +275,12 @@ export default {
             margin: 0vw 2vw 2.5vw 0;
             padding: 0 0 1.6vw 0;
             text-align: center;
-            background-color: $black;
+            background-color: $notblack;
 
             height: fit-content;
         }
     }
 }
-
-
-
-
-
 
 //+----------------------------------------+
 //|                ANIMAÇÕES               |
@@ -339,27 +337,121 @@ export default {
     animation: showing_arrow 1200ms linear 2000ms 5 normal both;
 }
 
-
-
-
-
-
-
-
-
 //+----------------------------------------+
 //|            RESPONSIVIDADE              |
 //+----------------------------------------+
-@media (max-width: 800px){
-    
-}
-@media (max-width: 600px){
+@media (max-width: 800px) {
+    .sec1_container {
+        display: flex;
+        background-color: $black;
+        margin: 0 0vw 120vw 0;
 
-}
-@media (max-width: 500px){
+        padding: 2vw 2vw 10vw 4vw;
 
-}
-@media (max-width: 350px){
+        #sec1_left {
+            width: 45vw;
+            margin-right: 5vw;
+            margin-top: 6vw;
 
+            .top_container {
+                span,
+                h3,
+                p {
+                    color: $notwhite;
+                }
+                span {
+                    font-size: 2.5vw;
+                }
+                h3 {
+                    font-size: 5vw;
+                }
+                p {
+                    font-size: 3.2vw;
+                    margin-top: 1.8vw;
+                    text-align: justify;
+                }
+            }
+            .bottom_container {
+                //ARROW
+                display: none;
+            }
+        }
+        #sec1_right {
+            display: flex;
+            flex-direction: column;
+
+            width: 45vw;
+
+            h6,
+            p {
+                color: $notwhite;
+                padding: 0 4vw 0 4vw;
+            }
+            h6 {
+                font-size: 3vw;
+                margin-top: 1.4vw;
+                margin-bottom: 1vw;
+            }
+            p {
+                font-size: 2.4vw;
+            }
+
+            .div_left {
+                width: 45vw;
+            }
+            .div_right {
+                position: absolute;
+                display: grid;
+                grid-template-columns: 2fr 3fr;
+
+                transform-style: preserve-3d;
+
+                align-items: baseline;
+
+                top: 0;
+                right: 0;
+
+                transform: translateY(110%);
+
+                width: 90vw;
+                #card2 {
+                    order: 1;
+                }
+                #card3 {
+                    order: 0;
+                }
+                img {
+                    width: 100%;
+                }
+                #background_div {
+                    display: block;
+                    background-color: $black;
+                    position: absolute;
+                    bottom: 20%;
+                    left: 0;
+                    right: 0;
+                    height: 50%;
+                    transform: scaleX(1.4) translateZ(-1vw);
+                }
+            }
+
+            .card_container {
+                position: relative;
+
+                margin: 0vw 2vw 2.5vw 0;
+                padding: 0 0 3vw 0;
+                text-align: center;
+                background-color: $black;
+
+                height: fit-content;
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+}
+@media (max-width: 500px) {
+}
+@media (max-width: 350px) {
 }
 </style>
