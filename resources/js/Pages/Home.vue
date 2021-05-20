@@ -58,9 +58,6 @@ export default {
 
             var margin = (2*windowHeight)/7;
 
-            console.log("window height: "+windowHeight);
-            console.log("elementY: "+el1Coo.y + margin);
-
             //Active Section1
             if(el1Coo.y + margin <= windowHeight){
                 this.$data.anim_cmd.sec_1 = "show";

@@ -11,7 +11,7 @@
         viewBox="0 0 426.667 426.667"
         style="enable-background: new 0 0 512 512"
         xml:space="preserve"
-        class=""
+        id="button_svg"
     >
         <g>
             <g xmlns="http://www.w3.org/2000/svg">
@@ -60,7 +60,7 @@ export default {};
 <style lang="scss" scoped>
 @import "resources/css/sass/allImports";
 
-svg {
+#button_svg {
     transition-property: transform;
     transition-duration: 500ms;
 

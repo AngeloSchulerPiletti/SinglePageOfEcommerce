@@ -16653,6 +16653,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      searchFieldState: false
+    };
+  },
+  methods: {
+    searchField: function searchField() {
+      var state = this.searchFieldState,
+          searchButton = document.querySelector("#search_container");
+
+      if (state) {
+        searchButton.dataset.searchstate = "hide";
+        searchButton.style.display = "none";
+        this.$data.searchFieldState = false;
+      } else {
+        searchButton.style.display = "block";
+        searchButton.dataset.searchstate = "show";
+        this.$data.searchFieldState = true;
+      }
+    }
+  },
   components: {
     LogoRose: _SVGs_LogoRose__WEBPACK_IMPORTED_MODULE_0__.default,
     Cart: _SVGs_Cart__WEBPACK_IMPORTED_MODULE_1__.default,
@@ -16974,8 +16995,8 @@ swiper_core__WEBPACK_IMPORTED_MODULE_1__.default.use([swiper_core__WEBPACK_IMPOR
   data: function data() {
     return {
       images: {
-        id1: "./images/pictures/image3.jpg",
-        id2: "./images/pictures/image4.jpg",
+        id1: "./images/pictures/image4.jpg",
+        id2: "./images/pictures/image3.jpg",
         id3: "./images/pictures/image5.jpg",
         id4: "./images/pictures/image6.jpg",
         id5: "./images/pictures/image7.jpg"
@@ -16984,7 +17005,7 @@ swiper_core__WEBPACK_IMPORTED_MODULE_1__.default.use([swiper_core__WEBPACK_IMPOR
   },
   methods: {
     goToImg: function goToImg(wich) {
-      console.log(swiper_vue__WEBPACK_IMPORTED_MODULE_6__.Swiper); // this.swiper.slideTo(i, 200); 
+      console.log(swiper_vue__WEBPACK_IMPORTED_MODULE_6__.Swiper); // this.swiper.slideTo(i, 200);
     }
   }
 });
@@ -17049,9 +17070,7 @@ __webpack_require__.r(__webpack_exports__);
       var scrollDelta = document.documentElement.scrollHeight,
           scrollY = document.documentElement.scrollTop,
           windowHeight = window.innerHeight;
-      var margin = 2 * windowHeight / 7;
-      console.log("window height: " + windowHeight);
-      console.log("elementY: " + el1Coo.y + margin); //Active Section1
+      var margin = 2 * windowHeight / 7; //Active Section1
 
       if (el1Coo.y + margin <= windowHeight) {
         this.$data.anim_cmd.sec_1 = "show";
@@ -17309,6 +17328,30 @@ var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNod
 var _hoisted_9 = {
   "class": "right"
 };
+var _hoisted_10 = {
+  id: "search_container",
+  "data-searchstate": "none",
+  style: {
+    "display": "none"
+  }
+};
+var _hoisted_11 = {
+  action: "busca",
+  method: "get"
+};
+
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
+  type: "text",
+  name: "search",
+  id: "searchInput"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_13 = {
+  type: "submit",
+  id: "searchButton"
+};
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
@@ -17323,7 +17366,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
 
   var _component_Cart = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Cart");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("nav", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, null, {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("nav", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, null, {
     "default": _withId(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_LogoRose)];
     }),
@@ -17365,16 +17408,13 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     _: 1
     /* STABLE */
 
-  })])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, null, {
-    "default": _withId(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Search, {
-        "class": "icons"
-      })];
-    }),
-    _: 1
-    /* STABLE */
-
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, null, {
+  })])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+    onClick: _cache[1] || (_cache[1] = function ($event) {
+      return $options.searchField();
+    })
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Search, {
+    "class": "icons"
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, null, {
     "default": _withId(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_User, {
         "class": "icons"
@@ -17392,7 +17432,9 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     _: 1
     /* STABLE */
 
-  })])]);
+  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("form", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Search, {
+    id: "searchIcon"
+  })])])])]);
 });
 
 /***/ }),
@@ -17450,7 +17492,7 @@ var _hoisted_1 = {
     "enable-background": "new 0 0 512 512"
   },
   "xml:space": "preserve",
-  "class": ""
+  id: "button_svg"
 };
 
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("g", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("g", {
@@ -18387,6 +18429,9 @@ var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("dat
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-06d9b79c");
 
 var _hoisted_1 = {
+  id: "swiper_container"
+};
+var _hoisted_2 = {
   id: "carousel_selector"
 };
 
@@ -18399,7 +18444,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
 
   var _component_carouselbutton = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("carouselbutton");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_swiper, {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_swiper, {
     spaceBetween: 0,
     centeredSlides: true,
     autoplay: {
@@ -18436,7 +18481,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     _: 1
     /* STABLE */
 
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.images, function (image, index) {
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.images, function (image, index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", {
       "class": "selector_container",
       key: index
@@ -18723,7 +18768,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "nav[data-v-33187943] {\n  display: grid;\n  grid-template-columns: 4fr 9fr 4fr;\n  justify-items: center;\n  align-items: center;\n  padding: 0 1vw 0 1vw;\n  background-color: #000000ff;\n}\nnav .left[data-v-33187943] {\n  width: 12vw;\n}\nnav .center #menu_links li[data-v-33187943] {\n  display: inline-block;\n  margin: 0 1.2vw 0 1.2vw;\n}\nnav .center #menu_links li a[data-v-33187943] {\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  color: #ffffffff;\n  font-size: 1.4vw;\n  transition-property: color;\n  transition-duration: 300ms;\n}\nnav .center #menu_links li a[data-v-33187943]:hover {\n  color: #f5e5d9ff;\n}\nnav .right[data-v-33187943] {\n  display: flex;\n  justify-content: space-between;\n  width: 6vw;\n}\nnav .right .icons[data-v-33187943] {\n  width: 1.5vw;\n  height: 1.5vw;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "div[data-v-33187943] {\n  transform-style: preserve-3d;\n}\ndiv nav[data-v-33187943] {\n  display: grid;\n  grid-template-columns: 4fr 9fr 4fr;\n  justify-items: center;\n  align-items: center;\n  padding: 0 1vw 0 1vw;\n  background-color: #000000ff;\n  z-index: 100;\n}\ndiv nav .left[data-v-33187943] {\n  width: 12vw;\n}\ndiv nav .center #menu_links li[data-v-33187943] {\n  display: inline-block;\n  margin: 0 1.2vw 0 1.2vw;\n}\ndiv nav .center #menu_links li a[data-v-33187943] {\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  color: #ffffffff;\n  font-size: 1.4vw;\n  transition-property: color;\n  transition-duration: 300ms;\n}\ndiv nav .center #menu_links li a[data-v-33187943]:hover {\n  color: #f5e5d9ff;\n}\ndiv nav .right[data-v-33187943] {\n  display: flex;\n  justify-content: space-between;\n  width: 6vw;\n}\ndiv nav .right .icons[data-v-33187943] {\n  width: 1.5vw;\n  height: 1.5vw;\n}\ndiv nav .right button[data-v-33187943] {\n  background-color: transparent;\n  border: none;\n  cursor: pointer;\n}\ndiv #search_container[data-v-33187943] {\n  padding: 0.7vw 1vw 0.4vw 1vw;\n  background-color: #272727ff;\n}\ndiv #search_container form[data-v-33187943] {\n  display: grid;\n  grid-template-columns: 18fr 1fr;\n  grid-template-rows: 2.4vw;\n  width: 100%;\n  height: 100%;\n}\ndiv #search_container form #searchInput[data-v-33187943] {\n  flex-grow: 1;\n  background-color: transparent;\n  border: none;\n  border-bottom: 1px solid #ffffffff;\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n  font-size: 1.4vw;\n  color: #f6f6f6ff;\n}\ndiv #search_container form #searchButton[data-v-33187943] {\n  background-color: transparent;\n  border: none;\n  cursor: pointer;\n}\ndiv #search_container form #searchButton #searchIcon[data-v-33187943] {\n  width: 2vw;\n  height: 2vw;\n}\n[data-searchState=\"none\"][data-v-33187943] {\n  transform: translateY(-100%) translateZ(-1vw);\n  opacity: 0;\n}\n[data-searchState=\"hide\"][data-v-33187943] {\n  transform: translateY(-100%) translateZ(-1vw);\n  opacity: 0;\n}\n[data-searchState=\"show\"][data-v-33187943] {\n  transform: translateY(0) translateZ(-1vw);\n  opacity: 1;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -18747,7 +18792,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "svg[data-v-c7854cbc] {\n  transition-property: transform;\n  transition-duration: 500ms;\n}\nsvg path[data-v-c7854cbc] {\n  transition-property: fill;\n  transition-duration: 300ms;\n}\nsvg[data-v-c7854cbc]:hover {\n  cursor: pointer;\n  transform: scale(1.8);\n}\nsvg:hover path[data-v-c7854cbc] {\n  fill: #272727ff;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#button_svg[data-v-c7854cbc] {\n  transition-property: transform;\n  transition-duration: 500ms;\n}\n#button_svg path[data-v-c7854cbc] {\n  transition-property: fill;\n  transition-duration: 300ms;\n}\n#button_svg[data-v-c7854cbc]:hover {\n  cursor: pointer;\n  transform: scale(1.8);\n}\n#button_svg:hover path[data-v-c7854cbc] {\n  fill: #272727ff;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -18939,7 +18984,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".secIns_container[data-v-a02897a6] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  position: relative;\n  margin-bottom: 20vw;\n}\n.secIns_container h4[data-v-a02897a6] {\n  font-family: 'Playfair Display', serif;\n  font-weight: 500;\n  display: swap;\n  font-size: 2.5vw;\n  margin-bottom: 3vw;\n  z-index: 100;\n}\n.secIns_container .bottom[data-v-a02897a6] {\n  z-index: 100;\n  display: flex;\n  justify-content: center;\n  width: 100%;\n}\n.secIns_container .bottom .left[data-v-a02897a6] {\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n  transition-property: transform;\n  transition-duration: 400ms;\n}\n.secIns_container .bottom .left img[data-v-a02897a6] {\n  height: 100%;\n}\n.secIns_container .bottom .left[data-v-a02897a6]:hover {\n  transform: scale(1.05);\n}\n.secIns_container .bottom .center[data-v-a02897a6] {\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n  margin: 0 4vw 0 4vw;\n  transform: translateY(15%);\n  transition-property: transform;\n  transition-duration: 400ms;\n}\n.secIns_container .bottom .center img[data-v-a02897a6] {\n  height: 100%;\n}\n.secIns_container .bottom .center[data-v-a02897a6]:hover {\n  transform: scale(1.05) translateY(15%);\n}\n.secIns_container .bottom .right[data-v-a02897a6] {\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n  transition-property: transform;\n  transition-duration: 400ms;\n}\n.secIns_container .bottom .right img[data-v-a02897a6] {\n  height: 100%;\n}\n.secIns_container .bottom .right[data-v-a02897a6]:hover {\n  transform: scale(1.05);\n}\n.secIns_container #middle_draw[data-v-a02897a6] {\n  position: absolute;\n  z-index: 0;\n  top: 50%;\n  background-color: #272727ff;\n  width: 100%;\n  height: 12vw;\n}\n@-webkit-keyframes showing_left-a02897a6 {\n0% {\n    transform: translateX(-80%) scaleY(0.5);\n    opacity: 0;\n}\n25% {\n    transform: translateX(-50%) scaleY(0.6);\n    opacity: 0.6;\n}\n50% {\n    transform: translateX(-30%) scaleY(0.7);\n    opacity: 1;\n}\n75% {\n    transform: translateX(0) scaleY(0.75);\n}\n100% {\n    transform: translateX(0) scaleY(1);\n}\n}\n@keyframes showing_left-a02897a6 {\n0% {\n    transform: translateX(-80%) scaleY(0.5);\n    opacity: 0;\n}\n25% {\n    transform: translateX(-50%) scaleY(0.6);\n    opacity: 0.6;\n}\n50% {\n    transform: translateX(-30%) scaleY(0.7);\n    opacity: 1;\n}\n75% {\n    transform: translateX(0) scaleY(0.75);\n}\n100% {\n    transform: translateX(0) scaleY(1);\n}\n}\n@-webkit-keyframes showing_right-a02897a6 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@keyframes showing_right-a02897a6 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@-webkit-keyframes hiding_left-a02897a6 {\nfrom {\n    transform: translateX(0);\n    opacity: 1;\n}\nto {\n    transform: translateX(-80%);\n    opacity: 0;\n}\n}\n@keyframes hiding_left-a02897a6 {\nfrom {\n    transform: translateX(0);\n    opacity: 1;\n}\nto {\n    transform: translateX(-80%);\n    opacity: 0;\n}\n}\n@-webkit-keyframes hiding_right-a02897a6 {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@keyframes hiding_right-a02897a6 {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@-webkit-keyframes showing_centertop-a02897a6 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@keyframes showing_centertop-a02897a6 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@-webkit-keyframes hiding_centertop-a02897a6 {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@keyframes hiding_centertop-a02897a6 {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n.none_container[data-v-a02897a6] {\n  opacity: 0;\n}\n.show_container[data-v-a02897a6] {\n  opacity: 1;\n}\n.none_centertop[data-v-a02897a6] {\n  opacity: 0;\n}\n.hide_centertop[data-v-a02897a6] {\n  -webkit-animation: hiding_centertop-a02897a6 200ms ease-out 0ms 1 normal both;\n          animation: hiding_centertop-a02897a6 200ms ease-out 0ms 1 normal both;\n}\n.show_centertop[data-v-a02897a6] {\n  -webkit-animation: showing_centertop-a02897a6 400ms ease-out 400ms 1 normal both;\n          animation: showing_centertop-a02897a6 400ms ease-out 400ms 1 normal both;\n}\n.none_left[data-v-a02897a6] {\n  opacity: 0;\n}\n.hide_left[data-v-a02897a6] {\n  -webkit-animation: hiding_left-a02897a6 200ms ease-out 0ms 1 normal both;\n          animation: hiding_left-a02897a6 200ms ease-out 0ms 1 normal both;\n}\n.show_left[data-v-a02897a6] {\n  -webkit-animation: showing_left-a02897a6 450ms ease-out 0ms 1 normal both;\n          animation: showing_left-a02897a6 450ms ease-out 0ms 1 normal both;\n}\n.none_right[data-v-a02897a6] {\n  opacity: 0;\n}\n.hide_right[data-v-a02897a6] {\n  -webkit-animation: hiding_right-a02897a6 200ms ease-out 0ms 1 normal both;\n          animation: hiding_right-a02897a6 200ms ease-out 0ms 1 normal both;\n}\n.show_right[data-v-a02897a6] {\n  -webkit-animation: showing_right-a02897a6 400ms ease-out 400ms 1 normal both;\n          animation: showing_right-a02897a6 400ms ease-out 400ms 1 normal both;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".secIns_container[data-v-a02897a6] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  position: relative;\n  margin-bottom: 20vw;\n}\n.secIns_container h4[data-v-a02897a6] {\n  font-family: 'Playfair Display', serif;\n  font-weight: 500;\n  display: swap;\n  font-size: 2.5vw;\n  margin-bottom: 3vw;\n  z-index: 100;\n}\n.secIns_container .bottom[data-v-a02897a6] {\n  z-index: 100;\n  display: flex;\n  justify-content: center;\n  width: 100%;\n}\n.secIns_container .bottom .left[data-v-a02897a6] {\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n  transition-property: transform;\n  transition-duration: 400ms;\n}\n.secIns_container .bottom .left img[data-v-a02897a6] {\n  height: 100%;\n}\n.secIns_container .bottom .left[data-v-a02897a6]:hover {\n  transform: scale(1.05);\n}\n.secIns_container .bottom .center[data-v-a02897a6] {\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n  margin: 0 4vw 0 4vw;\n  transform: translateY(15%);\n  transition-property: transform;\n  transition-duration: 400ms;\n}\n.secIns_container .bottom .center img[data-v-a02897a6] {\n  height: 100%;\n}\n.secIns_container .bottom .center[data-v-a02897a6]:hover {\n  transform: scale(1.05) translateY(15%);\n}\n.secIns_container .bottom .right[data-v-a02897a6] {\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n  transition-property: transform;\n  transition-duration: 400ms;\n}\n.secIns_container .bottom .right img[data-v-a02897a6] {\n  height: 100%;\n}\n.secIns_container .bottom .right[data-v-a02897a6]:hover {\n  transform: scale(1.05);\n}\n.secIns_container #middle_draw[data-v-a02897a6] {\n  position: absolute;\n  z-index: 0;\n  top: 50%;\n  background-color: #272727ff;\n  width: 100%;\n  height: 12vw;\n}\n@-webkit-keyframes showing_left-a02897a6 {\n0% {\n    transform: translateX(-80%) scaleY(0.5);\n    opacity: 0;\n}\n25% {\n    transform: translateX(-50%) scaleY(0.6);\n    opacity: 0.6;\n}\n50% {\n    transform: translateX(-30%) scaleY(0.7);\n    opacity: 1;\n}\n75% {\n    transform: translateX(0) scaleY(0.75);\n}\n100% {\n    transform: translateX(0) scaleY(1);\n}\n}\n@keyframes showing_left-a02897a6 {\n0% {\n    transform: translateX(-80%) scaleY(0.5);\n    opacity: 0;\n}\n25% {\n    transform: translateX(-50%) scaleY(0.6);\n    opacity: 0.6;\n}\n50% {\n    transform: translateX(-30%) scaleY(0.7);\n    opacity: 1;\n}\n75% {\n    transform: translateX(0) scaleY(0.75);\n}\n100% {\n    transform: translateX(0) scaleY(1);\n}\n}\n@-webkit-keyframes showing_right-a02897a6 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@keyframes showing_right-a02897a6 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@-webkit-keyframes hiding_left-a02897a6 {\nfrom {\n    transform: translateX(0);\n    opacity: 1;\n}\nto {\n    transform: translateX(-80%);\n    opacity: 0;\n}\n}\n@keyframes hiding_left-a02897a6 {\nfrom {\n    transform: translateX(0);\n    opacity: 1;\n}\nto {\n    transform: translateX(-80%);\n    opacity: 0;\n}\n}\n@-webkit-keyframes hiding_right-a02897a6 {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@keyframes hiding_right-a02897a6 {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@-webkit-keyframes showing_centertop-a02897a6 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@keyframes showing_centertop-a02897a6 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@-webkit-keyframes hiding_centertop-a02897a6 {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@keyframes hiding_centertop-a02897a6 {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n.none_container[data-v-a02897a6] {\n  opacity: 0;\n}\n.show_container[data-v-a02897a6] {\n  opacity: 1;\n}\n.none_centertop[data-v-a02897a6] {\n  opacity: 0;\n}\n.hide_centertop[data-v-a02897a6] {\n  -webkit-animation: hiding_centertop-a02897a6 200ms ease-out 0ms 1 normal both;\n          animation: hiding_centertop-a02897a6 200ms ease-out 0ms 1 normal both;\n}\n.show_centertop[data-v-a02897a6] {\n  -webkit-animation: showing_centertop-a02897a6 400ms ease-out 400ms 1 normal both;\n          animation: showing_centertop-a02897a6 400ms ease-out 400ms 1 normal both;\n}\n.none_left[data-v-a02897a6] {\n  opacity: 0;\n}\n.hide_left[data-v-a02897a6] {\n  -webkit-animation: hiding_left-a02897a6 200ms ease-out 0ms 1 normal both;\n          animation: hiding_left-a02897a6 200ms ease-out 0ms 1 normal both;\n}\n.show_left[data-v-a02897a6] {\n  -webkit-animation: showing_left-a02897a6 450ms ease-out 300ms 1 normal both;\n          animation: showing_left-a02897a6 450ms ease-out 300ms 1 normal both;\n}\n.none_right[data-v-a02897a6] {\n  opacity: 0;\n}\n.hide_right[data-v-a02897a6] {\n  -webkit-animation: hiding_right-a02897a6 200ms ease-out 0ms 1 normal both;\n          animation: hiding_right-a02897a6 200ms ease-out 0ms 1 normal both;\n}\n.show_right[data-v-a02897a6] {\n  -webkit-animation: showing_right-a02897a6 400ms ease-out 700ms 1 normal both;\n          animation: showing_right-a02897a6 400ms ease-out 700ms 1 normal both;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -18987,7 +19032,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#swiper_carousel .slides[data-v-06d9b79c] {\n  max-height: 70vh;\n  height: 50vw;\n}\n#swiper_carousel .slides .carousel_imgs[data-v-06d9b79c] {\n  width: 100%;\n  transform: translateY(-6%);\n}\n#carousel_selector[data-v-06d9b79c] {\n  display: flex;\n  justify-content: space-between;\n  margin: 3vw 0 5vw 0;\n  padding: 0 35vw 0 35vw;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n#carousel_selector .selector_container[data-v-06d9b79c] {\n  border-radius: 100%;\n  width: 2vw;\n  height: 2vw;\n  overflow: hidden;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n}\n#carousel_selector .selector_container .selector_img[data-v-06d9b79c] {\n  border-radius: 100%;\n  width: 1.1vw;\n  height: 1.1vw;\n  border: 0.15vw solid #ffffffff;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#swiper_container #swiper_carousel .slides[data-v-06d9b79c] {\n  max-height: 70vh;\n  height: 50vw;\n}\n#swiper_container #swiper_carousel .slides .carousel_imgs[data-v-06d9b79c] {\n  width: 100%;\n  transform: translateY(-6%);\n}\n#swiper_container #carousel_selector[data-v-06d9b79c] {\n  display: flex;\n  justify-content: space-between;\n  margin: 3vw 0 5vw 0;\n  padding: 0 35vw 0 35vw;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n#swiper_container #carousel_selector .selector_container[data-v-06d9b79c] {\n  border-radius: 100%;\n  width: 2vw;\n  height: 2vw;\n  overflow: hidden;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n}\n#swiper_container #carousel_selector .selector_container .selector_img[data-v-06d9b79c] {\n  border-radius: 100%;\n  width: 1.1vw;\n  height: 1.1vw;\n  border: 0.15vw solid #ffffffff;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

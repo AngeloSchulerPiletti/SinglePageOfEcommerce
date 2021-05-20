@@ -129,7 +129,7 @@ export default {
     animation: hiding_left 200ms ease-out 0ms 1 normal both;
 }
 .show_left{
-    animation: showing_left 450ms ease-out 0ms 1 normal both;
+    animation: showing_left 450ms ease-out 300ms 1 normal both;
 }
 
 .none_right{
@@ -139,7 +139,7 @@ export default {
     animation: hiding_right 200ms ease-out 0ms 1 normal both;
 }
 .show_right{
-    animation: showing_right 400ms ease-out 400ms 1 normal both;
+    animation: showing_right 400ms ease-out 700ms 1 normal both;
 }
 
 

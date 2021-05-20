@@ -1,7 +1,7 @@
 <template>
     <div id="_website_container_">
         <Menu id="menu"/>
-        <slot />
+        <slot/>
         <Footer id="rodape"/>
     </div>
 </template>
