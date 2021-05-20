@@ -109,14 +109,6 @@ export default {
             display: flex;
             justify-content: space-around;
             align-items: center;
-
-            .selector_img {
-                border-radius: 100%;
-                width: 1.1vw;
-                height: 1.1vw;
-
-                border: 0.15vw solid $white;
-            }
         }
     }
 }
@@ -125,40 +117,49 @@ export default {
 //|            RESPONSIVIDADE              |
 //+----------------------------------------+
 @media (max-width: 800px) {
+    #swiper_container {
+        #carousel_selector {
+            .selector_container {
+                width: 3vw;
+                height: 3vw;
+            }
+        }
+    }
 }
 
 @media (max-width: 600px) {
+    #swiper_container {
+        #carousel_selector {
+            .selector_container {
+                width: 4vw;
+                height: 4vw;
+            }
+        }
+    }
 }
 
 @media (max-width: 500px) {
     #swiper_container {
-        #swiper_carousel {
-            .slides {
-                max-height: 45vh;
-                height: fit-content;
-            }
-        }
         #carousel_selector {
-            margin: 0 0 14vw 0;
-            padding: 0 28vw 0 28vw;
-
             .selector_container {
                 width: 5vw;
                 height: 5vw;
-
-                .selector_img {
-                    border-radius: 100%;
-                    width: 2.2vw;
-                    height: 2.2vw;
-
-                    border: 2px solid $white;
-                }
             }
         }
     }
 }
 
 @media (max-width: 350px) {
-    //
+    #swiper_container {
+        #carousel_selector {
+            margin: 0 0 9vw 0;
+            padding: 0 28vw 0 28vw;
+
+            .selector_container {
+                width: 6vw;
+                height: 6vw;
+            }
+        }
+    }
 }
 </style>

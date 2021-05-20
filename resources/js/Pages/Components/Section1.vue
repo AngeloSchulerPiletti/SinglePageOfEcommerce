@@ -35,6 +35,7 @@
                             </p>
                         </div>
                         <div
+                            class="hidden_div"
                             id="toAbove1"
                             data-state="none"
                             style="display: none"
@@ -48,15 +49,7 @@
                                 Mussum Ipsum, cacilds vidis litro abertis. Mais
                                 vale um bebadis conhecidiss, que um alcoolatra
                                 anonimis. Diuretics paradis num copo é motivis
-                                de denguis. Praesent vel viverra nisi. Mauris
-                                aliquet nunc non turpis scelerisque, eget. Em pé
-                                sem cair, deitado sem dormir, sentado sem
-                                cochilar e fazendo pose. Quem manda na minha
-                                terra sou euzis! Nec orci ornare consequat.
-                                Praesent lacinia ultrices consectetur. Sed non
-                                ipsum felis. Per aumento de cachacis, eu
-                                reclamis. Admodum accumsan disputationi eu sit.
-                                Vide electram sadipscing et per.
+                                de denguis. Praesent vel viverra nisi. 
                             </p>
                         </div>
                     </div>
@@ -78,6 +71,7 @@
                             </p>
                         </div>
                         <div
+                            class="hidden_div"
                             id="toAbove2"
                             data-state="none"
                             style="display: none"
@@ -90,9 +84,7 @@
                             <p>
                                 Mussum Ipsum, cacilds vidis litro abertis. Mais
                                 vale um bebadis conhecidiss, que um alcoolatra
-                                anonimis. Diuretics paradis num copo é motivis
-                                de denguis. Praesent vel viverra nisi. Mauris
-                                aliquet nunc non turpis scelerisque, eget.
+                                anonimis. 
                             </p>
                         </div>
                     </div>
@@ -101,6 +93,7 @@
                         id="card3"
                         @mouseover="showP(3)"
                         @mouseleave="hideP(3)"
+                        
                     >
                         <img src="images/pictures/image2.jpg" alt="" />
                         <div>
@@ -108,6 +101,7 @@
                             <p>Porque maquiagem nunca é demais para você</p>
                         </div>
                         <div
+                            class="hidden_div"
                             id="toAbove3"
                             data-state="none"
                             style="display: none"
@@ -118,15 +112,7 @@
                                 Mussum Ipsum, cacilds vidis litro abertis. Mais
                                 vale um bebadis conhecidiss, que um alcoolatra
                                 anonimis. Diuretics paradis num copo é motivis
-                                de denguis. Praesent vel viverra nisi. Mauris
-                                aliquet nunc non turpis scelerisque, eget. Em pé
-                                sem cair, deitado sem dormir, sentado sem
-                                cochilar e fazendo pose. Quem manda na minha
-                                terra sou euzis! Nec orci ornare consequat.
-                                Praesent lacinia ultrices consectetur. Sed non
-                                ipsum felis. Per aumento de cachacis, eu
-                                reclamis. Admodum accumsan disputationi eu sit.
-                                Vide electram sadipscing et per.
+                                de denguis. 
                             </p>
                         </div>
                     </div>
@@ -346,7 +332,7 @@ export default {
         background-color: $black;
         margin: 0 0vw 120vw 0;
 
-        padding: 2vw 2vw 10vw 4vw;
+        padding: 2vw 0vw 10vw 4vw;
 
         #sec1_left {
             width: 45vw;
@@ -398,6 +384,8 @@ export default {
 
             .div_left {
                 width: 45vw;
+
+                
             }
             .div_right {
                 position: absolute;
@@ -413,7 +401,8 @@ export default {
 
                 transform: translateY(110%);
 
-                width: 90vw;
+                width: 100vw;
+
                 #card2 {
                     order: 1;
                 }
@@ -431,19 +420,30 @@ export default {
                     left: 0;
                     right: 0;
                     height: 50%;
-                    transform: scaleX(1.4) translateZ(-1vw);
+                    transform: translateZ(-1vw);
                 }
             }
 
             .card_container {
                 position: relative;
 
-                margin: 0vw 2vw 2.5vw 0;
+                margin: 0vw 2vw 2.5vw 2vw;
                 padding: 0 0 3vw 0;
                 text-align: center;
                 background-color: $black;
 
                 height: fit-content;
+
+                // transform: scale(0.9);
+
+                .hidden_div{
+                    h6{
+                        font-size: 4.5vw;
+                    }
+                    p{
+                        font-size: 2.8vw;
+                    }
+                }
             }
         }
     }
