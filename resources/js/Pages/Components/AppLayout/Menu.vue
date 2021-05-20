@@ -31,20 +31,6 @@
                 </button>
             </form>
         </div>
-        <aside id="menu_side">
-            <div class="left">
-                <ul id="menu_links">
-                    <li><inertia-link>ROUPAS</inertia-link></li>
-                    <li><inertia-link>ACESSÓRIOS</inertia-link></li>
-                    <li><inertia-link>JOIAS</inertia-link></li>
-                    <li><inertia-link>CONTATO</inertia-link></li>
-                    <li><inertia-link>SOBRE NÓS</inertia-link></li>
-                </ul>
-            </div>
-            <div class>
-                <Arrow/>
-            </div>
-        </aside>
     </div>
 </template>
 
@@ -99,14 +85,7 @@ export default {
 //+----------------------------------------+
 //|             ESTILO GERAL               |
 //+----------------------------------------+
-.block, .fixed{
-    #menu_side{
-        display: none;
-    }
-}
 .block {
-    transform-style: preserve-3d;
-
     nav {
         display: grid;
         grid-template-columns: 4fr 9fr 4fr;
@@ -359,7 +338,6 @@ export default {
             .left {
                 display: block;
                 width: 24vw;
-
             }
             .center {
                 display: none;
@@ -382,48 +360,42 @@ export default {
             }
         }
         #search_container {
-        padding: 0.7vw 2.5vw 0.4vw 2.5vw;
+            padding: 0.7vw 2.5vw 0.4vw 2.5vw;
 
-        background-color: $notblack;
+            background-color: $notblack;
 
-        form {
-            display: grid;
-            grid-template-columns: 19fr 1fr;
+            form {
+                display: grid;
+                grid-template-columns: 19fr 1fr;
                 grid-template-rows: 4.3vw;
 
-            width: 100%;
-            height: 100%;
+                width: 100%;
+                height: 100%;
 
-            #searchInput {
-                flex-grow: 1;
+                #searchInput {
+                    flex-grow: 1;
 
-                background-color: transparent;
-                border: none;
-                border-bottom: 1px solid $white;
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid $white;
 
-                @include Font2_SS();
+                    @include Font2_SS();
                     font-size: 2vw;
-                color: $notwhite;
-            }
-            #searchButton {
-                background-color: transparent;
-                border: none;
+                    color: $notwhite;
+                }
+                #searchButton {
+                    background-color: transparent;
+                    border: none;
 
-                cursor: pointer;
+                    cursor: pointer;
 
-                #searchIcon {
-                    width: 3vw;
+                    #searchIcon {
+                        width: 3vw;
                         height: 3vw;
+                    }
                 }
             }
         }
-        #menu_side{
-            display: flex;
-            position: fixed;
-
-
-        }
-    }
     }
 }
 
