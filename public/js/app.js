@@ -16921,6 +16921,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {
+    textShow: function textShow(wich) {
+      var element = document.querySelector("#from_" + wich); // element.style.display = "block";
+
+      element.className = "text_show";
+    },
+    textHide: function textHide(wich) {
+      var element = document.querySelector("#from_" + wich);
+      element.className = "text_hide";
+      setTimeout(function () {// element.style.display = "none";
+      }, 500);
+    }
+  },
   props: {
     state: String
   }
@@ -18228,9 +18241,7 @@ var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
   style: {
     "display": "none"
   }
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Linha Dark Girls"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " A renovada linha gótica que perpassa a história da humanidade. BeGI, BeGothic "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
-  id: "show_p1"
-}, " Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Diuretics paradis num copo é motivis de denguis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Quem manda na minha terra sou euzis! Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Per aumento de cachacis, eu reclamis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. ")], -1
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Linha Dark Girls"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " A renovada linha gótica que perpassa a história da humanidade. BeGI, BeGothic "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Diuretics paradis num copo é motivis de denguis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Quem manda na minha terra sou euzis! Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Per aumento de cachacis, eu reclamis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. ")], -1
 /* HOISTED */
 );
 
@@ -18255,9 +18266,7 @@ var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
   style: {
     "display": "none"
   }
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Linha Sad Girls:BeSad"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " BeGI, BeSad... A beleza é conveniente até mesmo na tristeza "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
-  id: "show_p2"
-}, " Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Diuretics paradis num copo é motivis de denguis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. ")], -1
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Linha Sad Girls:BeSad"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " BeGI, BeSad... A beleza é conveniente até mesmo na tristeza "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Diuretics paradis num copo é motivis de denguis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. ")], -1
 /* HOISTED */
 );
 
@@ -18278,9 +18287,7 @@ var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
   style: {
     "display": "none"
   }
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Linha Make:BePowder"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, "Porque maquiagem nunca é demais para você"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
-  id: "show_p3"
-}, " Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Diuretics paradis num copo é motivis de denguis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Quem manda na minha terra sou euzis! Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Per aumento de cachacis, eu reclamis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. ")], -1
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h6", null, "Linha Make:BePowder"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, "Porque maquiagem nunca é demais para você"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " Mussum Ipsum, cacilds vidis litro abertis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Diuretics paradis num copo é motivis de denguis. Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Quem manda na minha terra sou euzis! Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. Per aumento de cachacis, eu reclamis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. ")], -1
 /* HOISTED */
 );
 
@@ -18442,18 +18449,14 @@ var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 /* HOISTED */
 );
 
-var _hoisted_2 = {
-  "class": "left"
-};
-
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
   src: "images/pictures/image11.jpg",
   alt: ""
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   style: {
     "display": "none"
   }
@@ -18461,18 +18464,22 @@ var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 /* HOISTED */
 );
 
-var _hoisted_5 = {
-  "class": "center"
-};
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  id: "from_left",
+  "class": "text_hide",
+  text_above: ""
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " Casamentiss faiz malandris se pirulitá. Atirei o pau no gatis, per gatis num morreus. Delegadis gente finis, bibendum egestas augue arcu ut est. ")], -1
+/* HOISTED */
+);
 
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
   src: "images/pictures/image12.jpg",
   alt: ""
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   style: {
     "display": "none"
   }
@@ -18480,22 +18487,34 @@ var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 /* HOISTED */
 );
 
-var _hoisted_8 = {
-  "class": "right"
-};
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  id: "from_center",
+  "class": "text_hide",
+  text_above: ""
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget. Não sou faixa preta cumpadi, sou preto inteiris, inteiris. ")], -1
+/* HOISTED */
+);
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
   src: "images/pictures/image13.jpg",
   alt: ""
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   style: {
     "display": "none"
   }
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, "Ooooooooooooo")], -1
+/* HOISTED */
+);
+
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  id: "from_right",
+  "class": "text_hide",
+  text_above: ""
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " Quem num gosta di mé, boa gentis num é. Mé faiz elementum girarzis, nisi eros vermeio. Cevadis im ampola pa arma uma pindureta. ")], -1
 /* HOISTED */
 );
 
@@ -18513,28 +18532,58 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
   /* CLASS */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
     "class": 'bottom ' + $props.state + '_right'
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, null, {
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+    "class": "left",
+    onMouseover: _cache[1] || (_cache[1] = function ($event) {
+      return $options.textShow('left');
+    }),
+    onMouseleave: _cache[2] || (_cache[2] = function ($event) {
+      return $options.textHide('left');
+    })
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, null, {
     "default": _withId(function () {
-      return [_hoisted_3, _hoisted_4];
+      return [_hoisted_2, _hoisted_3];
     }),
     _: 1
     /* STABLE */
 
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, null, {
+  }), _hoisted_4], 32
+  /* HYDRATE_EVENTS */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+    "class": "center",
+    onMouseover: _cache[3] || (_cache[3] = function ($event) {
+      return $options.textShow('center');
+    }),
+    onMouseleave: _cache[4] || (_cache[4] = function ($event) {
+      return $options.textHide('center');
+    })
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, null, {
     "default": _withId(function () {
-      return [_hoisted_6, _hoisted_7];
+      return [_hoisted_5, _hoisted_6];
     }),
     _: 1
     /* STABLE */
 
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, null, {
+  }), _hoisted_7], 32
+  /* HYDRATE_EVENTS */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+    "class": "right",
+    onMouseover: _cache[5] || (_cache[5] = function ($event) {
+      return $options.textShow('right');
+    }),
+    onMouseleave: _cache[6] || (_cache[6] = function ($event) {
+      return $options.textHide('right');
+    })
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, null, {
     "default": _withId(function () {
-      return [_hoisted_9, _hoisted_10];
+      return [_hoisted_8, _hoisted_9];
     }),
     _: 1
     /* STABLE */
 
-  })])], 2
+  }), _hoisted_10], 32
+  /* HYDRATE_EVENTS */
+  )], 2
   /* CLASS */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
     id: "middle_draw",
@@ -19184,7 +19233,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".secIns_container[data-v-a02897a6] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  position: relative;\n  margin-bottom: 20vw;\n}\n.secIns_container h4[data-v-a02897a6] {\n  font-family: 'Playfair Display', serif;\n  font-weight: 500;\n  display: swap;\n  font-size: 2.5vw;\n  margin-bottom: 3vw;\n  z-index: 100;\n}\n.secIns_container .bottom[data-v-a02897a6] {\n  z-index: 100;\n  display: flex;\n  justify-content: center;\n  width: 100%;\n}\n.secIns_container .bottom .left[data-v-a02897a6] {\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n  transition-property: transform;\n  transition-duration: 400ms;\n}\n.secIns_container .bottom .left img[data-v-a02897a6] {\n  height: 100%;\n}\n.secIns_container .bottom .left[data-v-a02897a6]:hover {\n  transform: scale(1.05);\n}\n.secIns_container .bottom .center[data-v-a02897a6] {\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n  margin: 0 4vw 0 4vw;\n  transform: translateY(15%);\n  transition-property: transform;\n  transition-duration: 400ms;\n}\n.secIns_container .bottom .center img[data-v-a02897a6] {\n  height: 100%;\n}\n.secIns_container .bottom .center[data-v-a02897a6]:hover {\n  transform: scale(1.05) translateY(15%);\n}\n.secIns_container .bottom .right[data-v-a02897a6] {\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n  transition-property: transform;\n  transition-duration: 400ms;\n}\n.secIns_container .bottom .right img[data-v-a02897a6] {\n  height: 100%;\n}\n.secIns_container .bottom .right[data-v-a02897a6]:hover {\n  transform: scale(1.05);\n}\n.secIns_container #middle_draw[data-v-a02897a6] {\n  position: absolute;\n  z-index: 0;\n  top: 50%;\n  background-color: #272727ff;\n  width: 100%;\n  height: 12vw;\n}\n@-webkit-keyframes showing_left-a02897a6 {\n0% {\n    transform: translateX(-80%) scaleY(0.5);\n    opacity: 0;\n}\n25% {\n    transform: translateX(-50%) scaleY(0.6);\n    opacity: 0.6;\n}\n50% {\n    transform: translateX(-30%) scaleY(0.7);\n    opacity: 1;\n}\n75% {\n    transform: translateX(0) scaleY(0.75);\n}\n100% {\n    transform: translateX(0) scaleY(1);\n}\n}\n@keyframes showing_left-a02897a6 {\n0% {\n    transform: translateX(-80%) scaleY(0.5);\n    opacity: 0;\n}\n25% {\n    transform: translateX(-50%) scaleY(0.6);\n    opacity: 0.6;\n}\n50% {\n    transform: translateX(-30%) scaleY(0.7);\n    opacity: 1;\n}\n75% {\n    transform: translateX(0) scaleY(0.75);\n}\n100% {\n    transform: translateX(0) scaleY(1);\n}\n}\n@-webkit-keyframes showing_right-a02897a6 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@keyframes showing_right-a02897a6 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@-webkit-keyframes hiding_left-a02897a6 {\nfrom {\n    transform: translateX(0);\n    opacity: 1;\n}\nto {\n    transform: translateX(-80%);\n    opacity: 0;\n}\n}\n@keyframes hiding_left-a02897a6 {\nfrom {\n    transform: translateX(0);\n    opacity: 1;\n}\nto {\n    transform: translateX(-80%);\n    opacity: 0;\n}\n}\n@-webkit-keyframes hiding_right-a02897a6 {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@keyframes hiding_right-a02897a6 {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@-webkit-keyframes showing_centertop-a02897a6 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@keyframes showing_centertop-a02897a6 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@-webkit-keyframes hiding_centertop-a02897a6 {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@keyframes hiding_centertop-a02897a6 {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n.none_container[data-v-a02897a6] {\n  opacity: 0;\n}\n.show_container[data-v-a02897a6] {\n  opacity: 1;\n}\n.none_centertop[data-v-a02897a6] {\n  opacity: 0;\n}\n.hide_centertop[data-v-a02897a6] {\n  -webkit-animation: hiding_centertop-a02897a6 200ms ease-out 0ms 1 normal both;\n          animation: hiding_centertop-a02897a6 200ms ease-out 0ms 1 normal both;\n}\n.show_centertop[data-v-a02897a6] {\n  -webkit-animation: showing_centertop-a02897a6 400ms ease-out 400ms 1 normal both;\n          animation: showing_centertop-a02897a6 400ms ease-out 400ms 1 normal both;\n}\n.none_left[data-v-a02897a6] {\n  opacity: 0;\n}\n.hide_left[data-v-a02897a6] {\n  -webkit-animation: hiding_left-a02897a6 200ms ease-out 0ms 1 normal both;\n          animation: hiding_left-a02897a6 200ms ease-out 0ms 1 normal both;\n}\n.show_left[data-v-a02897a6] {\n  -webkit-animation: showing_left-a02897a6 450ms ease-out 300ms 1 normal both;\n          animation: showing_left-a02897a6 450ms ease-out 300ms 1 normal both;\n}\n.none_right[data-v-a02897a6] {\n  opacity: 0;\n}\n.hide_right[data-v-a02897a6] {\n  -webkit-animation: hiding_right-a02897a6 200ms ease-out 0ms 1 normal both;\n          animation: hiding_right-a02897a6 200ms ease-out 0ms 1 normal both;\n}\n.show_right[data-v-a02897a6] {\n  -webkit-animation: showing_right-a02897a6 400ms ease-out 700ms 1 normal both;\n          animation: showing_right-a02897a6 400ms ease-out 700ms 1 normal both;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".secIns_container[data-v-a02897a6] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  position: relative;\n  margin-bottom: 20vw;\n}\n.secIns_container h4[data-v-a02897a6] {\n  font-family: 'Playfair Display', serif;\n  font-weight: 500;\n  display: swap;\n  font-size: 2.5vw;\n  margin-bottom: 3vw;\n  z-index: 100;\n}\n.secIns_container .bottom[data-v-a02897a6] {\n  z-index: 100;\n  display: flex;\n  justify-content: center;\n  width: 100%;\n}\n.secIns_container .bottom .left[data-v-a02897a6] {\n  position: relative;\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n  transition-property: transform;\n  transition-duration: 400ms;\n}\n.secIns_container .bottom .left img[data-v-a02897a6] {\n  height: 100%;\n}\n.secIns_container .bottom .left[data-v-a02897a6]:hover {\n  transform: scale(1.05);\n}\n.secIns_container .bottom .center[data-v-a02897a6] {\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n  margin: 0 4vw 0 4vw;\n  transform: translateY(15%);\n  transition-property: transform;\n  transition-duration: 400ms;\n}\n.secIns_container .bottom .center img[data-v-a02897a6] {\n  height: 100%;\n}\n.secIns_container .bottom .center[data-v-a02897a6]:hover {\n  transform: scale(1.05) translateY(15%);\n}\n.secIns_container .bottom .right[data-v-a02897a6] {\n  width: 24vw;\n  height: 24vw;\n  overflow: hidden;\n  transition-property: transform;\n  transition-duration: 400ms;\n}\n.secIns_container .bottom .right img[data-v-a02897a6] {\n  height: 100%;\n}\n.secIns_container .bottom .right[data-v-a02897a6]:hover {\n  transform: scale(1.05);\n}\n.secIns_container #middle_draw[data-v-a02897a6] {\n  position: absolute;\n  z-index: 0;\n  top: 50%;\n  background-color: #272727ff;\n  width: 100%;\n  height: 12vw;\n}\n@-webkit-keyframes showing_left-a02897a6 {\n0% {\n    transform: translateX(-80%) scaleY(0.5);\n    opacity: 0;\n}\n25% {\n    transform: translateX(-50%) scaleY(0.6);\n    opacity: 0.6;\n}\n50% {\n    transform: translateX(-30%) scaleY(0.7);\n    opacity: 1;\n}\n75% {\n    transform: translateX(0) scaleY(0.75);\n}\n100% {\n    transform: translateX(0) scaleY(1);\n}\n}\n@keyframes showing_left-a02897a6 {\n0% {\n    transform: translateX(-80%) scaleY(0.5);\n    opacity: 0;\n}\n25% {\n    transform: translateX(-50%) scaleY(0.6);\n    opacity: 0.6;\n}\n50% {\n    transform: translateX(-30%) scaleY(0.7);\n    opacity: 1;\n}\n75% {\n    transform: translateX(0) scaleY(0.75);\n}\n100% {\n    transform: translateX(0) scaleY(1);\n}\n}\n@-webkit-keyframes showing_right-a02897a6 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@keyframes showing_right-a02897a6 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@-webkit-keyframes hiding_left-a02897a6 {\nfrom {\n    transform: translateX(0);\n    opacity: 1;\n}\nto {\n    transform: translateX(-80%);\n    opacity: 0;\n}\n}\n@keyframes hiding_left-a02897a6 {\nfrom {\n    transform: translateX(0);\n    opacity: 1;\n}\nto {\n    transform: translateX(-80%);\n    opacity: 0;\n}\n}\n@-webkit-keyframes hiding_right-a02897a6 {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@keyframes hiding_right-a02897a6 {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@-webkit-keyframes showing_centertop-a02897a6 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@keyframes showing_centertop-a02897a6 {\nfrom {\n    opacity: 0;\n}\nto {\n    opacity: 1;\n}\n}\n@-webkit-keyframes hiding_centertop-a02897a6 {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n@keyframes hiding_centertop-a02897a6 {\nfrom {\n    opacity: 1;\n}\nto {\n    opacity: 0;\n}\n}\n.none_container[data-v-a02897a6] {\n  opacity: 0;\n}\n.show_container[data-v-a02897a6] {\n  opacity: 1;\n}\n.none_centertop[data-v-a02897a6] {\n  opacity: 0;\n}\n.hide_centertop[data-v-a02897a6] {\n  -webkit-animation: hiding_centertop-a02897a6 200ms ease-out 0ms 1 normal both;\n          animation: hiding_centertop-a02897a6 200ms ease-out 0ms 1 normal both;\n}\n.show_centertop[data-v-a02897a6] {\n  -webkit-animation: showing_centertop-a02897a6 400ms ease-out 400ms 1 normal both;\n          animation: showing_centertop-a02897a6 400ms ease-out 400ms 1 normal both;\n}\n.none_left[data-v-a02897a6] {\n  opacity: 0;\n}\n.hide_left[data-v-a02897a6] {\n  -webkit-animation: hiding_left-a02897a6 200ms ease-out 0ms 1 normal both;\n          animation: hiding_left-a02897a6 200ms ease-out 0ms 1 normal both;\n}\n.show_left[data-v-a02897a6] {\n  -webkit-animation: showing_left-a02897a6 450ms ease-out 300ms 1 normal both;\n          animation: showing_left-a02897a6 450ms ease-out 300ms 1 normal both;\n}\n.none_right[data-v-a02897a6] {\n  opacity: 0;\n}\n.hide_right[data-v-a02897a6] {\n  -webkit-animation: hiding_right-a02897a6 200ms ease-out 0ms 1 normal both;\n          animation: hiding_right-a02897a6 200ms ease-out 0ms 1 normal both;\n}\n.show_right[data-v-a02897a6] {\n  -webkit-animation: showing_right-a02897a6 400ms ease-out 700ms 1 normal both;\n          animation: showing_right-a02897a6 400ms ease-out 700ms 1 normal both;\n}\n[text_above][data-v-a02897a6] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  background-color: #000000d5;\n  transition-property: opacity;\n  transition-duration: 500ms;\n  overflow: hidden;\n}\n[text_above] p[data-v-a02897a6] {\n  font-family: 'Playfair Display', serif;\n  font-weight: 400;\n  display: swap;\n  font-style: italic;\n  font-size: 1.5vw;\n  color: #ffffffff;\n  text-align: center;\n  width: 70%;\n  margin: auto;\n  padding-top: 3vw;\n}\n[text_above][data-v-a02897a6]:hover {\n  cursor: pointer;\n}\n.text_show[data-v-a02897a6] {\n  opacity: 1;\n}\n.text_hide[data-v-a02897a6] {\n  opacity: 0;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

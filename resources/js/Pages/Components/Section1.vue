@@ -44,7 +44,7 @@
                                 A renovada linha gótica que perpassa a história
                                 da humanidade. BeGI, BeGothic
                             </p>
-                            <p id="show_p1">
+                            <p>
                                 Mussum Ipsum, cacilds vidis litro abertis. Mais
                                 vale um bebadis conhecidiss, que um alcoolatra
                                 anonimis. Diuretics paradis num copo é motivis
@@ -87,7 +87,7 @@
                                 BeGI, BeSad... A beleza é conveniente até mesmo
                                 na tristeza
                             </p>
-                            <p id="show_p2">
+                            <p>
                                 Mussum Ipsum, cacilds vidis litro abertis. Mais
                                 vale um bebadis conhecidiss, que um alcoolatra
                                 anonimis. Diuretics paradis num copo é motivis
@@ -114,7 +114,7 @@
                         >
                             <h6>Linha Make:BePowder</h6>
                             <p>Porque maquiagem nunca é demais para você</p>
-                            <p id="show_p3">
+                            <p>
                                 Mussum Ipsum, cacilds vidis litro abertis. Mais
                                 vale um bebadis conhecidiss, que um alcoolatra
                                 anonimis. Diuretics paradis num copo é motivis
