@@ -29,7 +29,6 @@ export default {
                 scrollY = document.documentElement.scrollTop,
                 windowHeight = window.innerHeight;
 
-            console.log(scrollY);
             if (scrollY > 30) {
                 this.$data.menuLayout = "fixed";
             } else {

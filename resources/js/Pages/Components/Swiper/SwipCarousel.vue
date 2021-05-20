@@ -65,7 +65,7 @@ export default {
     },
     methods: {
         goToImg: function (wich) {
-            console.log(Swiper);
+            // console.log(Swiper);
             // this.swiper.slideTo(i, 200);
         },
     },
