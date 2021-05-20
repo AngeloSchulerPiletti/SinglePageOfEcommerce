@@ -1,0 +1,17 @@
+
+
+
+@mixin anchor {
+    a {
+        @include Font2_SS();
+        color: $white;
+        font-size: 1.4vw;
+
+        transition-property: color;
+        transition-duration: 300ms;
+
+        &:hover {
+            color: $redwhite;
+        }
+    }
+}

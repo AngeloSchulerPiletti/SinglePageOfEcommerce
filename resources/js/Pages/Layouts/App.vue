@@ -1,7 +1,7 @@
 <template>
     <div id="_website_container_">
-        <Menu id="menu"/>
-        <slot/>
+        <Menu id="menu" :layout="menuLayout"/>
+        <slot id="slot"/>
         <Footer id="rodape"/>
     </div>
 </template>
@@ -10,10 +10,36 @@
 import Menu from "../Components/AppLayout/Menu";
 import Footer from "../Components/AppLayout/Footer";
 export default {
+    data(){
+        return{
+            menuLayout: "block",
+        }
+    },
+    created() {
+        window.addEventListener("scroll", this.handleScroll);
+    },
+    destroyed() {
+        window.removeEventListener("scroll", this.handleScroll);
+    },
+    methods:{
+        handleScroll(event) {
+            var scrollDelta = document.documentElement.scrollHeight,
+                scrollY = document.documentElement.scrollTop,
+                windowHeight = window.innerHeight;
+
+            console.log(scrollY);
+            if(scrollY > 30){
+                this.$data.menuLayout = "fixed";
+            }else{
+                this.$data.menuLayout = "block";
+            }
+        },
+    },
     components: {
         Menu,
         Footer,
     },
+    
 };
 </script>
 
@@ -36,10 +62,21 @@ export default {
 }
 
 #_website_container_ {
+    position: relative;
+    
+
     display: flex;
     flex-direction: column;
     height: 100vh;
     background-color: $redwhite;
+
+    #menu{
+        z-index: 100000;
+    }
+
+    #slot{
+        z-index: 10;
+    }
 
     #rodape{
         margin-top: auto;

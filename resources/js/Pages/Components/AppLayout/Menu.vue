@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div :class="layout">
         <nav>
             <div class="left">
                 <inertia-link><LogoRose /></inertia-link>
@@ -70,12 +70,18 @@ export default {
         User,
         Search,
     },
+    props:{
+        layout: String,
+    }
 };
 </script>
 
 <style lang="scss" scoped>
 @import "resources/css/sass/allImports";
-div {
+@import "resources/css/sass/components/Menu/mixins";
+
+
+.block {
     transform-style: preserve-3d;
 
     nav {
@@ -98,18 +104,7 @@ div {
                     display: inline-block;
                     margin: 0 1.2vw 0 1.2vw;
 
-                    a {
-                        @include Font2_SS();
-                        color: $white;
-                        font-size: 1.4vw;
-
-                        transition-property: color;
-                        transition-duration: 300ms;
-
-                        &:hover {
-                            color: $redwhite;
-                        }
-                    }
+                    @include anchor();
                 }
             }
         }
@@ -128,6 +123,76 @@ div {
                 border: none;
                 cursor: pointer;
             }
+        }
+    }
+
+    #search_container {
+        padding: 0.7vw 1vw 0.4vw 1vw;
+
+        background-color: $notblack;
+
+        form {
+            display: grid;
+            grid-template-columns: 18fr 1fr;
+            grid-template-rows: 2.4vw;
+
+            width: 100%;
+            height: 100%;
+
+            #searchInput {
+                flex-grow: 1;
+
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid $white;
+
+                @include Font2_SS();
+                font-size: 1.4vw;
+                color: $notwhite;
+            }
+            #searchButton {
+                background-color: transparent;
+                border: none;
+
+                cursor: pointer;
+
+                #searchIcon {
+                    width: 2vw;
+                    height: 2vw;
+                }
+            }
+        }
+    }
+}
+.fixed{
+    position: fixed;
+    left: 0;
+    right: 0;
+
+
+    nav {
+        text-align: center;
+
+        padding: 1vw 1vw 1vw 1vw;
+        background-color: $black;
+
+        z-index: 100;
+
+        .left {
+            display: none;
+        }
+        .center {
+            #menu_links {
+                li {
+                    display: inline-block;
+                    margin: 0 2vw 0 2vw;
+
+                    @include anchor();
+                }
+            }
+        }
+        .right {
+            display: none;
         }
     }
 

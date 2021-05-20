@@ -57,7 +57,7 @@ export default {
                 windowHeight = window.innerHeight;
 
             var margin = (2*windowHeight)/7;
-
+            
             //Active Section1
             if(el1Coo.y + margin <= windowHeight){
                 this.$data.anim_cmd.sec_1 = "show";

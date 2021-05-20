@@ -17,7 +17,7 @@
 export default {};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import 'resources/css/sass/allImports';
 @import 'resources/css/sass/components/SVGs/mixins';
 

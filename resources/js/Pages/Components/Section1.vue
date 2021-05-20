@@ -327,6 +327,6 @@ export default {
     //
 }
 .show_arrow{
-    animation: showing_arrow 1200ms linear 2000ms 3 normal both;
+    animation: showing_arrow 1200ms linear 2000ms 5 normal both;
 }
 </style>
