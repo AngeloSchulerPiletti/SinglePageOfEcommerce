@@ -20,16 +20,20 @@ import SectionInstagram from "./Components/SectionInstagram";
 export default {
     data() {
         return {
-            anim_cmd:{
+            anim_cmd: {
                 sec_car: "none",
                 sec_1: "none",
                 sec_2: "none",
                 sec_3: "none",
             },
+            marginView: 0,
         };
     },
     created() {
         window.addEventListener("scroll", this.handleScroll);
+    },
+    mounted() {
+        this.readWindow();
     },
     destroyed() {
         window.removeEventListener("scroll", this.handleScroll);
@@ -42,6 +46,26 @@ export default {
         SecIns: SectionInstagram,
     },
     methods: {
+        //Pega dados da window para responsividade e aperfeiçoamento de UX
+        //Chamado assim que é renderiazado
+        readWindow() {
+            if (window.innerHeight >= 570) {
+                var vm = this.$data;
+                setTimeout(function () {
+                    vm.anim_cmd.sec_1 = "show";
+                }, 500);
+
+                this.$data.marginView = window.innerHeight / 7;
+            } else {
+                this.$data.marginView = (2 * window.innerHeight) / 7;
+            }
+
+            if (window.innerHeight >= document.documentElement.scrollHeight) {
+                this.$data.anim_cmd.sec_1 = "show";
+                this.$data.anim_cmd.sec_2 = "show";
+                this.$data.anim_cmd.sec_3 = "show";
+            }
+        },
 
         //Esta função é chamada toda vez que há um scroll
         handleScroll(event) {
@@ -59,35 +83,37 @@ export default {
                 scrollY = document.documentElement.scrollTop,
                 windowHeight = window.innerHeight;
 
-            var margin = (2*windowHeight)/7;
-            
+            var margin = this.$data.marginView;
+
             //ACTIVE SECTION 1
-            if(el1Coo.y + margin <= windowHeight){
+            if (el1Coo.y + margin <= windowHeight) {
                 this.$data.anim_cmd.sec_1 = "show";
             }
             // if(el1Coo.y + margin > windowHeight && this.$data.anim_cmd.sec_1 == "show"){
             //     this.$data.anim_cmd.sec_1 = "hide";
             // }
 
-
-
             //ACTIVE SECTION 2
-            if(el2Coo.y + margin <= windowHeight){
+            if (el2Coo.y + margin <= windowHeight) {
                 this.$data.anim_cmd.sec_2 = "show";
             }
-            if(el2Coo.y + margin > windowHeight && this.$data.anim_cmd.sec_2 == "show"){
+            if (
+                el2Coo.y + margin > windowHeight &&
+                this.$data.anim_cmd.sec_2 == "show"
+            ) {
                 this.$data.anim_cmd.sec_2 = "hide";
             }
 
-
             //ACTIVE SECTION 3
-            if(el3Coo.y + margin <= windowHeight){
+            if (el3Coo.y + margin <= windowHeight) {
                 this.$data.anim_cmd.sec_3 = "show";
             }
-            if(el3Coo.y + margin > windowHeight && this.$data.anim_cmd.sec_3 == "show"){
+            if (
+                el3Coo.y + margin > windowHeight &&
+                this.$data.anim_cmd.sec_3 == "show"
+            ) {
                 this.$data.anim_cmd.sec_3 = "hide";
             }
-
         },
     },
 };
@@ -98,5 +124,8 @@ export default {
 
 main {
     background-color: $redwhite;
+
+    #section_carousel {
+    }
 }
 </style>

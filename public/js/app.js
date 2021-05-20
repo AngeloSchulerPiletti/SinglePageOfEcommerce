@@ -17130,11 +17130,15 @@ __webpack_require__.r(__webpack_exports__);
         sec_1: "none",
         sec_2: "none",
         sec_3: "none"
-      }
+      },
+      marginView: 0
     };
   },
   created: function created() {
     window.addEventListener("scroll", this.handleScroll);
+  },
+  mounted: function mounted() {
+    this.readWindow();
   },
   destroyed: function destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
@@ -17147,6 +17151,25 @@ __webpack_require__.r(__webpack_exports__);
     SecIns: _Components_SectionInstagram__WEBPACK_IMPORTED_MODULE_4__.default
   },
   methods: {
+    //Pega dados da window para responsividade e aperfeiçoamento de UX
+    //Chamado assim que é renderiazado
+    readWindow: function readWindow() {
+      if (window.innerHeight >= 570) {
+        var vm = this.$data;
+        setTimeout(function () {
+          vm.anim_cmd.sec_1 = "show";
+        }, 500);
+        this.$data.marginView = window.innerHeight / 7;
+      } else {
+        this.$data.marginView = 2 * window.innerHeight / 7;
+      }
+
+      if (window.innerHeight >= document.documentElement.scrollHeight) {
+        this.$data.anim_cmd.sec_1 = "show";
+        this.$data.anim_cmd.sec_2 = "show";
+        this.$data.anim_cmd.sec_3 = "show";
+      }
+    },
     //Esta função é chamada toda vez que há um scroll
     handleScroll: function handleScroll(event) {
       var el0 = document.querySelector("#section_carousel"),
@@ -17160,7 +17183,7 @@ __webpack_require__.r(__webpack_exports__);
       var scrollDelta = document.documentElement.scrollHeight,
           scrollY = document.documentElement.scrollTop,
           windowHeight = window.innerHeight;
-      var margin = 2 * windowHeight / 7; //ACTIVE SECTION 1
+      var margin = this.$data.marginView; //ACTIVE SECTION 1
 
       if (el1Coo.y + margin <= windowHeight) {
         this.$data.anim_cmd.sec_1 = "show";
@@ -17218,6 +17241,9 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     window.addEventListener("scroll", this.handleScroll);
   },
+  mounted: function mounted() {
+    this.showWebsite();
+  },
   destroyed: function destroyed() {
     window.removeEventListener("scroll", this.handleScroll);
   },
@@ -17232,6 +17258,10 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         this.$data.menuLayout = "block";
       }
+    },
+    showWebsite: function showWebsite() {
+      var website = document.querySelector('#_website_container_');
+      website.style.visibility = "visible";
     }
   },
   components: {
@@ -19716,7 +19746,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  outline: 0;\n  text-decoration: none;\n  color: #000000ff;\n  -webkit-tap-highlight-color: transparent;\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n}\n* ul li {\n  list-style: none;\n}\n#_website_container_ {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  background-color: #f5e5d9ff;\n}\n#_website_container_ #sidemenu {\n  z-index: 1000;\n}\n#_website_container_ #menu {\n  z-index: 100000;\n}\n#_website_container_ #slot {\n  z-index: 1;\n}\n#_website_container_ #rodape {\n  margin-top: auto;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  outline: 0;\n  text-decoration: none;\n  color: #000000ff;\n  -webkit-tap-highlight-color: transparent;\n  font-family: 'PT sans', sans-serif;\n  font-weight: 400;\n  display: swap;\n}\n* ul li {\n  list-style: none;\n}\n#_website_container_ {\n  position: relative;\n  visibility: hidden;\n  display: flex;\n  flex-direction: column;\n  height: 100vh;\n  background-color: #f5e5d9ff;\n}\n#_website_container_ #sidemenu {\n  z-index: 1000;\n}\n#_website_container_ #menu {\n  z-index: 100000;\n}\n#_website_container_ #slot {\n  z-index: 1;\n}\n#_website_container_ #rodape {\n  margin-top: auto;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

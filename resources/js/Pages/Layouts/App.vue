@@ -20,6 +20,9 @@ export default {
     created() {
         window.addEventListener("scroll", this.handleScroll);
     },
+    mounted(){
+        this.showWebsite();
+    },
     destroyed() {
         window.removeEventListener("scroll", this.handleScroll);
     },
@@ -34,6 +37,11 @@ export default {
             } else {
                 this.$data.menuLayout = "block";
             }
+        },
+        showWebsite(){
+            var website = document.querySelector('#_website_container_');
+
+            website.style.visibility = "visible";
         },
     },
     components: {
@@ -66,6 +74,8 @@ export default {
 
 #_website_container_ {
     position: relative;
+
+    visibility: hidden;
 
     display: flex;
     flex-direction: column;
