@@ -152,7 +152,6 @@ export default {
 @media (max-width: 350px) {
     #swiper_container {
         #carousel_selector {
-            margin: 0 0 9vw 0;
             padding: 0 28vw 0 28vw;
 
             .selector_container {
