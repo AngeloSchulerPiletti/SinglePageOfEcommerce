@@ -330,7 +330,7 @@ export default {
     .sec1_container {
         display: flex;
         background-color: $black;
-        margin: 0 0vw 120vw 0;
+        margin: 0 0vw 105vw 0;
 
         padding: 2vw 0vw 10vw 4vw;
 

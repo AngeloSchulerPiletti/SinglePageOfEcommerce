@@ -5,7 +5,7 @@
             :centeredSlides="true"
             class="parallax-slider"
             id="swiper_banner"
-        > 
+        >
             <swiper-slide
                 class="slides"
                 v-for="(image, index) in images"
@@ -55,7 +55,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import 'resources/css/sass/allImports';
+@import "resources/css/sass/allImports";
 
 div {
     #swiper_banner {
@@ -68,5 +68,24 @@ div {
             }
         }
     }
+}
+
+//+----------------------------------------+
+//|            RESPONSIVIDADE              |
+//+----------------------------------------+
+
+@media (max-width: 800px) {
+    // div {
+    //     #swiper_banner {
+    //         width: 50vw;
+    //         height: 35vw;
+    //     }
+    // }
+}
+@media (max-width: 600px) {
+}
+@media (max-width: 500px) {
+}
+@media (max-width: 350px) {
 }
 </style>
