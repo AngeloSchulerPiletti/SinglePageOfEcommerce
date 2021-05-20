@@ -59,7 +59,6 @@ export default {
                 id2: "./images/pictures/image3.jpg",
                 id3: "./images/pictures/image5.jpg",
                 id4: "./images/pictures/image6.jpg",
-                id5: "./images/pictures/image7.jpg",
             },
         };
     },
@@ -75,16 +74,12 @@ export default {
 <style lang="scss" scoped>
 @import "resources/css/sass/allImports";
 
-
-
 //+----------------------------------------+
 //|             ESTILO GERAL               |
 //+----------------------------------------+
 
 #swiper_container {
-
     #swiper_carousel {
-
         .slides {
             max-height: 70vh;
             height: 50vw;
@@ -126,21 +121,44 @@ export default {
     }
 }
 
-
-
 //+----------------------------------------+
 //|            RESPONSIVIDADE              |
 //+----------------------------------------+
-@media (max-width: 800px){
-    
+@media (max-width: 800px) {
 }
-@media (max-width: 600px){
 
+@media (max-width: 600px) {
 }
-@media (max-width: 500px){
 
+@media (max-width: 500px) {
+    #swiper_container {
+        #swiper_carousel {
+            .slides {
+                max-height: 45vh;
+                height: fit-content;
+            }
+        }
+        #carousel_selector {
+            margin: 0 0 14vw 0;
+            padding: 0 28vw 0 28vw;
+
+            .selector_container {
+                width: 5vw;
+                height: 5vw;
+
+                .selector_img {
+                    border-radius: 100%;
+                    width: 2.2vw;
+                    height: 2.2vw;
+
+                    border: 2px solid $white;
+                }
+            }
+        }
+    }
 }
-@media (max-width: 350px){
 
+@media (max-width: 350px) {
+    //
 }
 </style>

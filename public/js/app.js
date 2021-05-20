@@ -17088,8 +17088,7 @@ swiper_core__WEBPACK_IMPORTED_MODULE_1__.default.use([swiper_core__WEBPACK_IMPOR
         id1: "./images/pictures/image4.jpg",
         id2: "./images/pictures/image3.jpg",
         id3: "./images/pictures/image5.jpg",
-        id4: "./images/pictures/image6.jpg",
-        id5: "./images/pictures/image7.jpg"
+        id4: "./images/pictures/image6.jpg"
       }
     };
   },
@@ -19669,7 +19668,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#swiper_container #swiper_carousel .slides[data-v-06d9b79c] {\n  max-height: 70vh;\n  height: 50vw;\n}\n#swiper_container #swiper_carousel .slides .carousel_imgs[data-v-06d9b79c] {\n  width: 100%;\n  transform: translateY(-6%);\n}\n#swiper_container #carousel_selector[data-v-06d9b79c] {\n  display: flex;\n  justify-content: space-between;\n  margin: 3vw 0 5vw 0;\n  padding: 0 35vw 0 35vw;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n#swiper_container #carousel_selector .selector_container[data-v-06d9b79c] {\n  border-radius: 100%;\n  width: 2vw;\n  height: 2vw;\n  overflow: hidden;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n}\n#swiper_container #carousel_selector .selector_container .selector_img[data-v-06d9b79c] {\n  border-radius: 100%;\n  width: 1.1vw;\n  height: 1.1vw;\n  border: 0.15vw solid #ffffffff;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#swiper_container #swiper_carousel .slides[data-v-06d9b79c] {\n  max-height: 70vh;\n  height: 50vw;\n}\n#swiper_container #swiper_carousel .slides .carousel_imgs[data-v-06d9b79c] {\n  width: 100%;\n  transform: translateY(-6%);\n}\n#swiper_container #carousel_selector[data-v-06d9b79c] {\n  display: flex;\n  justify-content: space-between;\n  margin: 3vw 0 5vw 0;\n  padding: 0 35vw 0 35vw;\n  height: -webkit-fit-content;\n  height: -moz-fit-content;\n  height: fit-content;\n}\n#swiper_container #carousel_selector .selector_container[data-v-06d9b79c] {\n  border-radius: 100%;\n  width: 2vw;\n  height: 2vw;\n  overflow: hidden;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n}\n#swiper_container #carousel_selector .selector_container .selector_img[data-v-06d9b79c] {\n  border-radius: 100%;\n  width: 1.1vw;\n  height: 1.1vw;\n  border: 0.15vw solid #ffffffff;\n}\n@media (max-width: 500px) {\n#swiper_container #swiper_carousel .slides[data-v-06d9b79c] {\n    max-height: 45vh;\n    height: -webkit-fit-content;\n    height: -moz-fit-content;\n    height: fit-content;\n}\n#swiper_container #carousel_selector[data-v-06d9b79c] {\n    margin: 0 0 14vw 0;\n    padding: 0 28vw 0 28vw;\n}\n#swiper_container #carousel_selector .selector_container[data-v-06d9b79c] {\n    width: 5vw;\n    height: 5vw;\n}\n#swiper_container #carousel_selector .selector_container .selector_img[data-v-06d9b79c] {\n    border-radius: 100%;\n    width: 2.2vw;\n    height: 2.2vw;\n    border: 2px solid #ffffffff;\n}\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
