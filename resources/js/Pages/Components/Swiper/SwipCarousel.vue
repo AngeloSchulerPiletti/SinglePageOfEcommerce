@@ -75,6 +75,12 @@ export default {
 <style lang="scss" scoped>
 @import "resources/css/sass/allImports";
 
+
+
+//+----------------------------------------+
+//|             ESTILO GERAL               |
+//+----------------------------------------+
+
 #swiper_container {
 
     #swiper_carousel {
@@ -118,5 +124,23 @@ export default {
             }
         }
     }
+}
+
+
+
+//+----------------------------------------+
+//|            RESPONSIVIDADE              |
+//+----------------------------------------+
+@media (max-width: 800px){
+    
+}
+@media (max-width: 600px){
+
+}
+@media (max-width: 500px){
+
+}
+@media (max-width: 350px){
+
 }
 </style>

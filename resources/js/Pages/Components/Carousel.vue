@@ -16,6 +16,7 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang='scss'>
+// PRATICAMENTE TODO ESTILO ESTÁ EM: 
+// resources/js/Pages/Components/Swiper/SwipCarousel.vue
 </style>

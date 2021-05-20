@@ -1,46 +1,66 @@
 <template>
     <svg
-        id="b22333e6-2a4f-41da-be4e-5ab2969b599f"
-        data-name="Camada 1"
+        id="aca15763-4f63-4b6c-becd-3a9bbfd33177"
+        data-name="b22333e6-2a4f-41da-be4e-5ab2969b599f"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 906.7 505.7"
+        viewBox="0 0 879.4 311.8"
     >
-        <title>BeGI_logoRosé</title>
+        <title>BeGI_logoRosé2</title>
         <text
-            transform="translate(0 326)"
-            font-size="314.18"
+            transform="translate(0 239.9)"
+            font-size="287.78"
             fill="#f6e6da"
-            font-family="ErasITC-Light, Eras Light ITC"
-            font-weight="300"
+            font-family="ErasITC-Medium, Eras Medium ITC"
+            font-weight="500"
+            style="isolation: isolate"
         >
             BeGI
         </text>
-        <text x="-33.7" y="-297.9" />
-        <text x="-33.7" y="-297.9" />
         <line
-            x1="653.5"
-            y1="343.2"
-            x2="653.5"
-            y2="101.2"
+            x1="621"
+            y1="263.3"
+            x2="621"
+            y2="24.6"
             fill="none"
             stroke="#f6e6da"
             stroke-miterlimit="10"
             stroke-width="3"
         />
-        <text
-            transform="translate(682.3 165.1) scale(1.1 1)"
-            font-size="45.9"
-            fill="#f6e6da"
-            font-family="ErasITC-Light, Eras Light ITC"
-            font-weight="300"
-            letter-spacing="0.13em"
-        >
-            <tspan xml:space="preserve">BeFree</tspan>
-            <tspan x="0" y="76" xml:space="preserve">since</tspan>
-            <tspan letter-spacing="0.13em">
-                <tspan x="0" y="152">2003</tspan>
-            </tspan>
-        </text>
+        <g style="isolation: isolate">
+            <text
+                transform="translate(649.5 87.6) scale(1.1 1)"
+                font-size="45.27"
+                fill="#f6e6da"
+                font-family="ErasITC-Medium, Eras Medium ITC"
+                font-weight="500"
+                letter-spacing="0.13em"
+                style="isolation: isolate"
+            >
+                <tspan xml:space="preserve">BeFree</tspan>
+            </text>
+            <text
+                transform="translate(649.5 162.6) scale(1.1 1)"
+                font-size="45.27"
+                fill="#f6e6da"
+                font-family="ErasITC-Medium, Eras Medium ITC"
+                font-weight="500"
+                letter-spacing="0.13em"
+                style="isolation: isolate"
+            >
+                <tspan xml:space="preserve">since</tspan>
+            </text>
+            <text
+                transform="translate(649.5 237.5) scale(1.1 1)"
+                font-size="45.27"
+                fill="#f6e6da"
+                font-family="ErasITC-Medium, Eras Medium ITC"
+                font-weight="500"
+                letter-spacing="0.13em"
+                style="isolation: isolate"
+            >
+                2003
+            </text>
+        </g>
     </svg>
 </template>
 

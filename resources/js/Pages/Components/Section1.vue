@@ -14,7 +14,7 @@
                     </p>
                 </div>
                 <div class="bottom_container">
-                    <Arrow id="arrow" :class="state+'_arrow'"/>
+                    <Arrow id="arrow" :class="state + '_arrow'" />
                 </div>
             </div>
 
@@ -169,6 +169,12 @@ export default {
 <style lang="scss">
 @import "resources/css/sass/allImports";
 
+
+
+//+----------------------------------------+
+//|               ESTILO GERAL             |
+//+----------------------------------------+
+
 .sec1_container {
     display: flex;
     background-color: $notblack;
@@ -220,7 +226,6 @@ export default {
 
                 width: 10vw;
                 height: 10vw;
-
             }
         }
     }
@@ -271,27 +276,31 @@ export default {
 
             height: fit-content;
         }
-
-        @import "resources/css/sass/components/Section2/animations";
-        [data-state="show"] {
-            position: absolute;
-
-            padding-top: 5%;
-            top: 0;
-            bottom: 0;
-
-            animation: showAnim 500ms ease-out 0ms 1 normal both;
-        }
-        [data-state="hide"] {
-            position: absolute;
-
-            padding-top: 5%;
-            top: 0;
-            bottom: 0;
-
-            animation: hideAnim 500ms ease-in 0ms 1 normal both;
-        }
     }
+}
+
+
+
+
+
+
+//+----------------------------------------+
+//|                ANIMAÇÕES               |
+//+----------------------------------------+
+
+@import "resources/css/sass/components/Section2/animations";
+[data-state] {
+    position: absolute;
+
+    padding-top: 5%;
+    top: 0;
+    bottom: 0;
+}
+[data-state="show"] {
+    animation: showAnim 500ms ease-out 0ms 1 normal both;
+}
+[data-state="hide"] {
+    animation: hideAnim 500ms ease-in 0ms 1 normal both;
 }
 
 @include section1_anim();
@@ -323,10 +332,34 @@ export default {
     animation: showing_right 400ms ease-out 600ms 1 normal both;
 }
 
-.none_arrow{
+.none_arrow {
     //
 }
-.show_arrow{
+.show_arrow {
     animation: showing_arrow 1200ms linear 2000ms 5 normal both;
+}
+
+
+
+
+
+
+
+
+
+//+----------------------------------------+
+//|            RESPONSIVIDADE              |
+//+----------------------------------------+
+@media (max-width: 800px){
+    
+}
+@media (max-width: 600px){
+
+}
+@media (max-width: 500px){
+
+}
+@media (max-width: 350px){
+
 }
 </style>

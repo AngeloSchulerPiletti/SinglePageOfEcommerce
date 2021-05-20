@@ -1,5 +1,6 @@
 <template>
     <layout>
+        <!-- ORGANIZAÇÃO DAS SESSÕES. FACILITA CASO ALGUM DIA QUEIRAMOS ADICIONAR/MUDAR/DELETAR SESSÕES -->
         <main>
             <Carousel :state="anim_cmd.sec_car" id="section_carousel" />
             <Sec1 :state="anim_cmd.sec_1" id="section_1" />
@@ -41,6 +42,8 @@ export default {
         SecIns: SectionInstagram,
     },
     methods: {
+
+        //Esta função é chamada toda vez que há um scroll
         handleScroll(event) {
             var el0 = document.querySelector("#section_carousel"),
                 el1 = document.querySelector("#section_1"),
@@ -58,7 +61,7 @@ export default {
 
             var margin = (2*windowHeight)/7;
             
-            //Active Section1
+            //ACTIVE SECTION 1
             if(el1Coo.y + margin <= windowHeight){
                 this.$data.anim_cmd.sec_1 = "show";
             }
@@ -68,7 +71,7 @@ export default {
 
 
 
-            //Active Section2
+            //ACTIVE SECTION 2
             if(el2Coo.y + margin <= windowHeight){
                 this.$data.anim_cmd.sec_2 = "show";
             }
@@ -77,7 +80,7 @@ export default {
             }
 
 
-            //Active Section3
+            //ACTIVE SECTION 3
             if(el3Coo.y + margin <= windowHeight){
                 this.$data.anim_cmd.sec_3 = "show";
             }

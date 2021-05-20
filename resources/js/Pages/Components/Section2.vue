@@ -43,6 +43,14 @@ export default {
 <style lang="scss" scoped>
 @import "resources/css/sass/allImports";
 
+
+
+
+
+//+----------------------------------------+
+//|             ESTILO GERAL               |
+//+----------------------------------------+
+
 .sec2_container {
     #sec2_div {
         display: flex;
@@ -132,6 +140,10 @@ export default {
 
 
 
+
+//+----------------------------------------+
+//|                ANIMAÇÕES               |
+//+----------------------------------------+
 @include section2_anim();
 
 .none_container{
@@ -164,5 +176,29 @@ export default {
 .show_right{
     animation: showing_right 400ms ease-out 600ms 1 normal both;
      
+}
+
+
+
+
+
+
+
+
+
+//+----------------------------------------+
+//|            RESPONSIVIDADE              |
+//+----------------------------------------+
+@media (max-width: 800px){
+    
+}
+@media (max-width: 600px){
+
+}
+@media (max-width: 500px){
+
+}
+@media (max-width: 350px){
+
 }
 </style>

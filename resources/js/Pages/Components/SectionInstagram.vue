@@ -92,6 +92,12 @@ export default {
 @import "resources/css/sass/allImports";
 @import "resources/css/sass/Components/SectionInstagram/mixins";
 
+
+
+
+//+----------------------------------------+
+//|              ESTILO GERAL              |
+//+----------------------------------------+
 .secIns_container {
     display: flex;
     flex-direction: column;
@@ -150,6 +156,14 @@ export default {
     }
 }
 
+
+
+
+
+
+//+----------------------------------------+
+//|                ANIMAÇÕES               |
+//+----------------------------------------+
 @include section3_anim();
 
 .none_container {
@@ -223,5 +237,31 @@ export default {
 }
 .text_hide {
     opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+//+----------------------------------------+
+//|            RESPONSIVIDADE              |
+//+----------------------------------------+
+@media (max-width: 800px){
+    
+}
+@media (max-width: 600px){
+
+}
+@media (max-width: 500px){
+
+}
+@media (max-width: 350px){
+
 }
 </style>
