@@ -207,8 +207,8 @@ export default {
         .bottom_container {
             position: relative;
 
-            width: 10vw;
-            height: 10vw;
+            // width: 10vw;
+            // height: 10vw;
 
             #arrow {
                 position: absolute;
@@ -216,10 +216,10 @@ export default {
                 top: 0;
                 left: 0;
 
-                transform: translate(100%, 350%);
+                transform: translate(100%, 300%);
 
-                width: 100%;
-                height: 100%;
+                width: 10vw;
+                height: 10vw;
 
             }
         }
