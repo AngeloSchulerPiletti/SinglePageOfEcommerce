@@ -400,5 +400,43 @@ export default {
 }
 
 @media (max-width: 350px) {
+    .block,
+    .fixed {
+        nav {
+            padding: 2.4vw 5vw 2.4vw 5vw;
+
+            .left {
+                width: 28vw;
+            }
+            .right {
+                width: 23vw;
+
+                .icons {
+                    width: 6vw;
+                    height: 6vw;
+                }
+            }
+        }
+        #search_container {
+            padding: 2vw 4vw 2vw 4vw;
+
+            form {
+                grid-template-columns: 19fr 3fr;
+                grid-template-rows: 8vw;
+
+                #searchInput {
+                    flex-grow: 1;
+
+                    font-size: 5vw;
+                }
+                #searchButton {
+                    #searchIcon {
+                        width: 6vw;
+                        height: 6vw;
+                    }
+                }
+            }
+        }
+    }
 }
 </style>

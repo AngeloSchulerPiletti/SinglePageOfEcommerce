@@ -133,7 +133,7 @@ export default {
             
         }
         .right {
-            padding-top: 18vw;
+            padding-top: 36.5vw;
 
             z-index: 10;
             #pushButton {
@@ -180,9 +180,8 @@ export default {
             
         }
         .right {
-            padding-top: 18vw;
-
             z-index: 10;
+
             #pushButton {
                 background-color: $black;
                 border: none;

@@ -53,6 +53,8 @@ export default {
     outline: 0;
     text-decoration: none;
     color: $black;
+    -webkit-tap-highlight-color: transparent;
+    
     @include Font2_SS;
 
     ul {
