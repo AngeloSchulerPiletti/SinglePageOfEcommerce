@@ -1,8 +1,8 @@
 <template>
-    <section :class="state+'_container'">
-        <div class="sec1_container" :class="state+'_left'">
+    <section :class="state + '_container'">
+        <div class="sec1_container" :class="state + '_left'">
             <div id="sec1_left">
-                <div>
+                <div class="top_container">
                     <span>BeGI é ser você</span>
                     <h3>Ser linda nunca foi tão fácil</h3>
                     <p>
@@ -13,10 +13,12 @@
                         dos tratores não altera o pão duris.
                     </p>
                 </div>
-                <img src="" alt="" />
+                <div class="bottom_container">
+                    <Arrow id="arrow" :class="state+'_arrow'"/>
+                </div>
             </div>
 
-            <div id="sec1_right" :class="state+'_right'">
+            <div id="sec1_right" :class="state + '_right'">
                 <div class="div_left">
                     <div
                         class="card_container"
@@ -32,7 +34,11 @@
                                 da humanidade. BeGI, BeGothic
                             </p>
                         </div>
-                        <div id="toAbove1" data-state="none" style="display: none;">
+                        <div
+                            id="toAbove1"
+                            data-state="none"
+                            style="display: none"
+                        >
                             <h6>Linha Dark Girls</h6>
                             <p>
                                 A renovada linha gótica que perpassa a história
@@ -71,7 +77,11 @@
                                 na tristeza
                             </p>
                         </div>
-                        <div id="toAbove2" data-state="none" style="display: none;">
+                        <div
+                            id="toAbove2"
+                            data-state="none"
+                            style="display: none"
+                        >
                             <h6>Linha Sad Girls:BeSad</h6>
                             <p>
                                 BeGI, BeSad... A beleza é conveniente até mesmo
@@ -97,7 +107,11 @@
                             <h6>Linha Make:BePowder</h6>
                             <p>Porque maquiagem nunca é demais para você</p>
                         </div>
-                        <div id="toAbove3" data-state="none" style="display: none;">
+                        <div
+                            id="toAbove3"
+                            data-state="none"
+                            style="display: none"
+                        >
                             <h6>Linha Make:BePowder</h6>
                             <p>Porque maquiagem nunca é demais para você</p>
                             <p id="show_p3">
@@ -123,8 +137,8 @@
 </template>
 
 <script>
+import Arrow from "./SVGs/Arrow";
 export default {
-
     methods: {
         showP: function (el) {
             var elementAbove = document.querySelector("#toAbove" + el),
@@ -138,17 +152,17 @@ export default {
                 elementCard = document.querySelector("#card" + el);
 
             elementAbove.dataset.state = "hide";
-            setTimeout(function(){
+            setTimeout(function () {
                 elementAbove.style.display = "none";
-            }, 600)
+            }, 600);
         },
-
     },
-    props:{
+    props: {
         state: String,
-
     },
-
+    components: {
+        Arrow,
+    },
 };
 </script>
 
@@ -170,7 +184,7 @@ export default {
         margin-right: 5vw;
         margin-top: 6vw;
 
-        div {
+        .top_container {
             span,
             h3,
             p {
@@ -188,6 +202,25 @@ export default {
                 @include Font2_SS();
                 font-size: 1.4vw;
                 margin-top: 1vw;
+            }
+        }
+        .bottom_container {
+            position: relative;
+
+            width: 10vw;
+            height: 10vw;
+
+            #arrow {
+                position: absolute;
+
+                top: 0;
+                left: 0;
+
+                transform: translate(100%, 350%);
+
+                width: 100%;
+                height: 100%;
+
             }
         }
     }
@@ -221,7 +254,7 @@ export default {
         .div_right {
             position: absolute;
 
-            right: 0vw;
+            right: 0;
 
             width: 28vw;
             img {
@@ -249,48 +282,51 @@ export default {
 
             animation: showAnim 500ms ease-out 0ms 1 normal both;
         }
-        [data-state="hide"]{
+        [data-state="hide"] {
             position: absolute;
 
             padding-top: 5%;
             top: 0;
             bottom: 0;
 
-            animation: hideAnim 500ms ease-in 0ms 1 normal both;;
-
+            animation: hideAnim 500ms ease-in 0ms 1 normal both;
         }
     }
 }
 
 @include section1_anim();
 
-.none_container{
+.none_container {
     opacity: 0;
 }
-.show_container{
+.show_container {
     opacity: 1;
 }
 
-
-
-
-.none_left{
+.none_left {
     opacity: 0;
 }
 // .hide_left{
 //     animation: hiding_left 500ms ease-out 200ms 1 normal both;
 // }
-.show_left{
+.show_left {
     animation: showing_left 600ms ease-out 0ms 1 normal both;
 }
 
-.none_right{
+.none_right {
     opacity: 0;
 }
 // .hide_rigth{
 //     animation: hiding_right 200ms ease-out 0ms 1 normal both;
 // }
-.show_right{
+.show_right {
     animation: showing_right 400ms ease-out 600ms 1 normal both;
+}
+
+.none_arrow{
+    //
+}
+.show_arrow{
+    animation: showing_arrow 1200ms linear 2000ms 3 normal both;
 }
 </style>

@@ -9,6 +9,12 @@
         from{opacity: 0; transform: scale(0.9);}
         to{opacity: 1; transform: scale(1);}
     }
+    @keyframes showing_arrow {
+        0%{transform: translate(100%, 350%);}
+        25%{transform: translate(100%, 330%);}
+        75%{transform: translate(100%, 380%);}
+        100%{transform: translate(100%, 350%);}
+    }
 
 
     @keyframes hiding_left {
@@ -21,6 +27,7 @@
         to{opacity: 0; transform: scale(0.9);}
         
     }
+
 }
 
 
