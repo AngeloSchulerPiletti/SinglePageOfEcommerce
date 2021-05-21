@@ -451,6 +451,9 @@ export default {
 @media (max-width: 600px) {
 }
 @media (max-width: 500px) {
+    .sec1_container {
+        margin: 0 0vw 130vw 0;
+    }
 }
 @media (max-width: 350px) {
 }

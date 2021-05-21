@@ -21,7 +21,8 @@
             </div>
 
             <div :class="'right ' + state + '_right'">
-                <SwipBan />
+                <SwipBan id="swip_ban" />
+                <div id="background_div"><div></div></div>
             </div>
         </div>
     </section>
@@ -166,33 +167,31 @@ export default {
 //+----------------------------------------+
 //|            RESPONSIVIDADE              |
 //+----------------------------------------+
+
 @media (max-width: 800px) {
     .sec2_container {
         #sec2_div {
             display: flex;
+            flex-direction: column;
 
             position: relative;
 
-            background-color: $notblack;
+            background-color: transparent;
 
-            padding: 3vw 3vw 3vw 5vw;
-            margin: 0 18vw 20vw 0;
+            padding: 0;
+            margin: 0 0 18vw 0;
 
             .left {
-                display: flex;
+                background-color: $notblack;
 
-                width: 70vw;
+                width: 80vw;
+
+                padding: 3vw 5vw 3vw 5vw;
 
                 img {
                     width: 34vw;
                 }
                 .topbottom_container {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-
-                    margin-left: 2vw;
-
                     .top {
                         span {
                             font-size: 1.8vw;
@@ -219,107 +218,153 @@ export default {
                 }
             }
             .right {
-                display: none;
-                //---------------------------------------------------
-                //DECIDI NÃO UTILIZAR ESTE ELEMENTO POIS, PARA MIM,
-                //ELE MAIS ESTRAGAVA DO QUE AGREGAVA
-                //---------------------------------------------------
+                position: relative;
+                margin-top: 8vw;
 
-                // top: 135%;
-                // right: 5%;
-                // width: 60vw;
+                background-color: transparent;
 
-                // padding: 4vw 0 4vw 0;
+                #swip_ban {
+                }
+                #background_div {
+                    position: absolute;
+                    background-color: $black;
 
-                // background-color: $notblack;
+                    height: 50%;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+
+                    transform: translateY(-50%);
+
+                    display: flex;
+                    align-items: center;
+
+                    div {
+                        width: 100%;
+                        background-color: $notblack;
+                        height: 30%;
+                    }
+                }
             }
         }
     }
 
-    // .none_right {
-    //     opacity: 0;
-    // }
-    // .hide_right {
-    //     animation: hiding_right2 200ms ease-out 0ms 1 normal both;
-    // }
-    // .show_right {
-    //     animation: showing_right2 400ms ease-out 1 normal both;
-    // }
+    .none_right {
+        // opacity: 0;
+        opacity: 1;
+    }
+    .hide_right {
+        animation: hiding_right2 200ms ease-out 0ms 1 normal both;
+    }
+    .show_right {
+        animation: showing_right2 400ms ease-out 500ms 1 normal both;
+    }
 }
 @media (max-width: 600px) {
     .sec2_container {
         #sec2_div {
-            padding: 3vw 3vw 3vw 5vw;
-            margin: 0 10vw 20vw 0;
+            margin: 0 0 24vw 0;
 
             .left {
-                width: 90vw;
+                padding: 3vw 3vw 3vw 5vw;
 
                 img {
-                    width: 42vw;
+                    width: 40vw;
                 }
                 .topbottom_container {
-                    margin-left: 4vw;
+                    margin-left: 3.4vw;
 
                     .top {
                         span {
-                            font-size: 2.3vw;
+                            font-size: 2.2vw;
                         }
                         h3 {
-                            font-size: 5vw;
+                            font-size: 4.6vw;
                         }
                         p {
-                            font-size: 2.9vw;
-                            margin-top: 2vw;
-                            text-align: justify;
+                            font-size: 2.8vw;
+                            margin-top: 1.8vw;
                         }
                     }
                     .bottom {
                         border-radius: 1vw;
 
-                        margin: 0 0 1.5vw 3vw;
-                        padding: 1.5vw 3.5vw 1.5vw 3.5vw;
+                        margin: 0 0 1.5vw 2vw;
+                        padding: 1.3vw 2.8vw 1.3vw 2.8vw;
 
                         a {
-                            font-size: 4vw;
+                            font-size: 3.8vw;
                         }
                     }
                 }
             }
         }
     }
+
+    .none_right {
+        // opacity: 0;
+        opacity: 1;
+    }
+    .hide_right {
+        animation: hiding_right2 200ms ease-out 0ms 1 normal both;
+    }
+    .show_right {
+        animation: showing_right2 400ms ease-out 500ms 1 normal both;
+    }
 }
+
 @media (max-width: 500px) {
-}
-@media (max-width: 350px) {
     .sec2_container {
         #sec2_div {
-            padding: 5vw 3vw 5vw 5vw;
-            margin: 0 0vw 20vw 0;
+            margin: 0 0 35vw 0;
 
             .left {
-                width: 90vw;
+                padding: 5.6vw 0vw 5.6vw 0vw;
+                width: 100%;
 
+                img {
+                    width: 46vw;
+                    margin-left: 3vw;
+                }
                 .topbottom_container {
+                    margin: 0 3vw 0 4vw;
+
                     .top {
                         span {
-                            font-size: 2.5vw;
+                            font-size: 2.8vw;
                         }
                         h3 {
-                            font-size: 5vw;
+                            font-size: 5.5vw;
+                            margin-top: 3vw;
                         }
                         p {
-                            font-size: 3.1vw;
+                            font-size: 3.5vw;
+                            margin-top: 2vw;
                         }
                     }
                     .bottom {
                         border-radius: 1.4vw;
 
-                        margin: 0 0 1.5vw 3vw;
-                        padding: 1vw 3.5vw 1vw 3.5vw;
+                        margin: 0 0 1.5vw 2vw;
+                        padding: 1.5vw 3.5vw 1.5vw 3.5vw;
+
+                        a {
+                            font-size: 4.2vw;
+                        }
                     }
                 }
             }
+            .right {
+                margin-top: 12vw;
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .sec2_container {
+        #sec2_div {
+            margin: 0 0 42vw 0;
         }
     }
 }

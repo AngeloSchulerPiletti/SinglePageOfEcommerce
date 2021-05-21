@@ -46,7 +46,6 @@ export default {
                 id2: "./images/pictures/image4.jpg",
                 id3: "./images/pictures/image5.jpg",
                 id4: "./images/pictures/image6.jpg",
-                id5: "./images/pictures/image7.jpg",
             },
         };
     },
@@ -75,17 +74,29 @@ div {
 //+----------------------------------------+
 
 @media (max-width: 800px) {
-    // div {
-    //     #swiper_banner {
-    //         width: 50vw;
-    //         height: 35vw;
-    //     }
-    // }
+    div {
+        #swiper_banner {
+            width: 50vw;
+            height: 35vw;
+        }
+    }
 }
 @media (max-width: 600px) {
+     div {
+        #swiper_banner {
+            width: 70vw;
+            height: 48vw;
+        }
+    }
 }
 @media (max-width: 500px) {
 }
 @media (max-width: 350px) {
+    div {
+        #swiper_banner {
+            width: 82vw;
+            height: 54vw;
+        }
+    }
 }
 </style>
