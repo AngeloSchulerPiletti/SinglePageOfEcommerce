@@ -1,5 +1,5 @@
-# :octocat: Desafio Técnico Vnda
-Desafio técnico de Front-End proposto pela Vnda, cujo objetivo era realizar uma página a partir de um [wireframe](https://drive.google.com/file/d/10xpr_7qaEXNBT4v2dOKqanS4_tOcgEJs/view).
+# Desafio Técnico Vnda
+:octocat: Desafio técnico de Front-End proposto pela Vnda, cujo objetivo era realizar uma página a partir de um [wireframe](https://drive.google.com/file/d/10xpr_7qaEXNBT4v2dOKqanS4_tOcgEJs/view).
 A página foi desenvolvida usando **Vue.JS**, **SASS**, **Swiper** (biblioteca) e **Laravel** (como backend).
 
 <img src='./Print.png'>
