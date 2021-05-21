@@ -200,4 +200,40 @@
             opacity: 0;
         }
     }
+
+
+
+
+
+
+    @keyframes showing_left2 {
+        0% {
+            transform: translateX(120%) scaleY(0.5);
+            opacity: 0;
+        }
+        25% {
+            transform: translateX(50%) scaleY(0.6);
+            opacity: 0.6;
+        }
+        50% {
+            transform: translateX(30%) scaleY(0.7);
+            opacity: 1;
+        }
+        75% {
+            transform: translateX(0) scaleY(0.75);
+        }
+        100% {
+            transform: translateX(0) scaleY(1);
+        }
+    }
+    @keyframes hiding_left2 {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(-80%);
+            opacity: 0;
+        }
+    }
 }

@@ -19,7 +19,7 @@
                     <p>
                         Casamentiss faiz malandris se pirulitá. Atirei o pau no
                         gatis, per gatis num morreus. Delegadis gente finis,
-                        bibendum egestas augue arcu ut est. 
+                        bibendum egestas augue arcu ut est.
                     </p>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                     <p>
                         Praesent vel viverra nisi. Mauris aliquet nunc non
                         turpis scelerisque, eget. Não sou faixa preta cumpadi,
-                        sou preto inteiris, inteiris. 
+                        sou preto inteiris, inteiris.
                     </p>
                 </div>
             </div>
@@ -55,12 +55,13 @@
                     <p>
                         Quem num gosta di mé, boa gentis num é. Mé faiz
                         elementum girarzis, nisi eros vermeio. Cevadis im ampola
-                        pa arma uma pindureta. 
+                        pa arma uma pindureta.
                     </p>
                 </div>
             </div>
         </div>
-        <div id="middle_draw" :class="state + '_left'"></div>
+        <div id="top_draw" :class="state + '_left'"></div>
+        <div id="bottom_draw" :class="state + '_left2'"></div>
     </section>
 </template>
 
@@ -92,9 +93,6 @@ export default {
 @import "resources/css/sass/allImports";
 @import "resources/css/sass/Components/SectionInstagram/mixins";
 
-
-
-
 //+----------------------------------------+
 //|              ESTILO GERAL              |
 //+----------------------------------------+
@@ -123,11 +121,11 @@ export default {
         .left {
             position: relative;
 
-            @include horizontalDivs();
+            @include horizontalDivs(24vw);
             @include instagramZoom();
         }
         .center {
-            @include horizontalDivs();
+            @include horizontalDivs(24vw);
 
             margin: 0 4vw 0 4vw;
             transform: translateY(15%);
@@ -140,11 +138,11 @@ export default {
             }
         }
         .right {
-            @include horizontalDivs();
+            @include horizontalDivs(24vw);
             @include instagramZoom();
         }
     }
-    #middle_draw {
+    #top_draw {
         position: absolute;
         z-index: 0;
 
@@ -154,12 +152,10 @@ export default {
         width: 100%;
         height: 12vw;
     }
+    #bottom_draw {
+        display: none;
+    }
 }
-
-
-
-
-
 
 //+----------------------------------------+
 //|                ANIMAÇÕES               |
@@ -183,6 +179,9 @@ export default {
     animation: showing_centertop 400ms ease-out 400ms 1 normal both;
 }
 
+
+
+
 .none_left {
     opacity: 0;
 }
@@ -192,6 +191,19 @@ export default {
 .show_left {
     animation: showing_left 450ms ease-out 300ms 1 normal both;
 }
+
+.none_left2 {
+    opacity: 0;
+}
+.hide_left2 {
+    animation: hiding_left2 200ms ease-out 0ms 1 normal both;
+}
+.show_left2 {
+    animation: showing_left2 450ms ease-out 300ms 1 normal both;
+}
+
+
+
 
 .none_right {
     opacity: 0;
@@ -216,19 +228,19 @@ export default {
 
     overflow: hidden;
 
-    p{
-    @include Font3_SI();
-    font-size: 1.5vw;
+    p {
+        @include Font3_SI();
+        font-size: 1.5vw;
 
-    color: $white;
-    text-align: center;
+        color: $white;
+        text-align: center;
 
-    width: 70%;
-    margin: auto;
+        width: 70%;
+        margin: auto;
 
-    padding-top: 3vw;
+        padding-top: 3vw;
     }
-    &:hover{
+    &:hover {
         cursor: pointer;
     }
 }
@@ -239,29 +251,105 @@ export default {
     opacity: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
 //+----------------------------------------+
 //|            RESPONSIVIDADE              |
 //+----------------------------------------+
-@media (max-width: 800px){
-    
-}
-@media (max-width: 600px){
+@media (max-width: 800px) {
+    .secIns_container {
+        margin-bottom: 30vw;
 
-}
-@media (max-width: 500px){
+        h4 {
+            font-size: 5vw;
+            margin-bottom: 5vw;
+        }
+        .bottom {
+            justify-content: center;
 
-}
-@media (max-width: 350px){
+            .left {
+                position: relative;
 
+                @include horizontalDivs(30vw);
+                @include instagramZoom();
+            }
+            .center {
+                @include horizontalDivs(32vw);
+
+                margin: 0 2vw 0 2vw;
+            }
+            .right {
+                @include horizontalDivs(30vw);
+                @include instagramZoom();
+            }
+        }
+        #top_draw {
+            height: 15vw;
+        }
+    }
+}
+@media (max-width: 600px) {
+}
+@media (max-width: 500px) {
+    .secIns_container {
+        margin-bottom: 20vw;
+
+        h4 {
+            font-size: 7vw;
+            margin-bottom: 7vw;
+        }
+        .bottom {
+            display: grid;
+            grid-template-areas:
+                "div1 div2"
+                "div3 div3";
+            row-gap: 6vw;
+            justify-content: space-around;
+
+            width: 100%;
+
+            .left {
+                grid-area: div1;
+                position: relative;
+
+                @include horizontalDivs(42vw);
+                @include instagramZoom();
+            }
+            .center {
+                grid-area: div2;
+                @include horizontalDivs(42vw);
+
+                margin: 0;
+                transform: translateY(0);
+
+                &:hover {
+                    transform: scale(1.05) translateY(0);
+                }
+            }
+            .right {
+                grid-area: div3;
+                @include horizontalDivs(50vw);
+                @include instagramZoom();
+
+                margin: auto;
+            }
+        }
+        #top_draw {
+            top: 24%;
+
+            height: 24vw;
+        }
+        #bottom_draw {
+            display: block;
+            position: absolute;
+            z-index: 0;
+
+            top: 70%;
+
+            background-color: $notblack;
+            width: 100%;
+            height: 24vw;
+        }
+    }
+}
+@media (max-width: 350px) {
 }
 </style>
